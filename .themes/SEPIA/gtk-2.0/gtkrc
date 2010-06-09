@@ -1,0 +1,843 @@
+# SEPIA by Rydgel ( rydgel.deviantart.com )
+# rydgel@ymail.com
+# 2009
+
+gtk-button-images = 0
+gtk-toolbar-icon-size = GTK_ICON_SIZE_SMALL_TOOLBAR
+gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-button=16,16:gtk-large-toolbar=16,16"
+gtk-menu-images = 0
+
+ 
+
+style "candido-default" {
+	GtkScrolledWindow::scrollbars-within-bevel = 0 # very important for better appearance
+	GtkScrolledWindow::scrollbar-spacing = 0 # 0 pixels between gtklist and scrollbar
+  	GtkButton      ::default_border    = { 0, 0, 0, 0 }
+  	GtkRange       ::trough_border     = 0
+  	GtkPaned       ::handle_size       = 6
+  	GtkRange       ::slider_width      = 6
+  	GtkRange       ::stepper_size      = 6
+  
+  	GtkScrollbar   ::min_slider_length = 35
+  	GtkCheckButton ::indicator_size    = 14
+  	GtkMenuBar     ::internal-padding  = 0
+  	GtkTreeView    ::expander_size     = 14
+  	GtkExpander    ::expander_size     = 16
+  	GtkScale       ::slider-length     = 31
+	#  GtkToolbar     ::button-relief     = GTK_RELIEF_NORMAL
+	#  GtkMenuBar     ::shadow-type       = GTK_SHADOW_OUT
+	#  GtkScrollbar   ::has-secondary-forward-stepper = 1
+	#  GtkScrollbar   ::has-secondary-backward-stepper = 1
+
+  	GtkButton      ::child-displacement-x = 0
+  	GtkButton      ::child-displacement-y = 0
+
+  	xthickness = 0
+  	ythickness = 0
+
+ fg[NORMAL]       	 = "#6c614b"# Metacity and mouseover, Most text
+  fg[ACTIVE]       	 = "#6c614b"
+  fg[PRELIGHT]     	  =  "#bdaa83"
+  fg[SELECTED]     	   =  "#bdaa83"
+  fg[INSENSITIVE]  	 = "#4c4435"
+
+  bg[NORMAL]       	 = "#211d17"  
+  bg[ACTIVE]       	  = "#211d17"  
+  bg[PRELIGHT]     	 = "#211d17"  
+  bg[SELECTED]     	 = "#322c23"
+  bg[INSENSITIVE]  	  = "#1d1a14" # Menu active item in active window
+
+  text[NORMAL]	 =  "#6c614b" 
+
+  base[NORMAL]     	  = "#211d17"  
+  base[ACTIVE]     	 = "#211d17"  
+  base[PRELIGHT]     = "#211d17"  
+  base[INSENSITIVE]  = "#211d17"  
+  base[SELECTED]     = "#1d1a14" # Menu active item in active window
+
+  text[NORMAL]	 =  "#4c4435" # Text in window, arrows
+  text[INSENSITIVE]	 = "#4c4435" # Insensitive arrows
+  text[SELECTED]   	   =  "#6c614b" # Active text in active window
+  text[ACTIVE]     	   =  "#6c614b"# Active text in inactive window
+  text[PRELIGHT]   	 = "#4c4435" # Text on Mouseover
+
+
+
+  engine "murrine" 
+  {
+#	 scrollbar_color     		 = "#f4f2f3"
+#	 contrast 			 = 0.3
+#	 glazestyle 			 = 0 # 0 = flat hilight, 1 = curved hilight
+#	 menubarstyle        		 =  # 0 = flat, 1 = glass, 2 = gradient
+#	 menubaritemstyle	   	 = 0 # 0 = menuitem look, 1 = button look
+#	 listviewheaderstyle 		 = 1 # 0 = flat, 1 = glass
+#	 animation           		 = TRUE
+	menuitemstyle = 2 # 0 = flat, 1 = glassy, 2 = striped
+	scrollbar_color = "#2b271e"
+	scrollbarstyle = 3
+	contrast = 0.1
+	menustyle = 0
+	glazestyle = 0 # 0 = flat hilight, 1 = curved hilight, 2 = concave style
+	menubarstyle = 0 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+	menubaritemstyle = 0 # 0 = menuitem look, 1 = button look
+	menuitemstyle = 0 # 0 = flat, 1 = glassy, 2 = striped
+	listviewheaderstyle = 0 # 0 = flat, 1 = glassy
+	roundness = 1 # 0 = squared, 1 = old default, more will increase roundness
+    	animation = TRUE # FALSE = disabled, TRUE = enabled
+ 	
+      hilight_ratio = 0.909090
+        gradients = FALSE
+        listviewstyle = 1
+  }
+}
+
+
+style "candido-wide" = "candido-default" {
+  	xthickness = 0
+  	ythickness = 0
+}
+
+style "candido-wider" = "candido-default" {
+  	xthickness = 0
+  	ythickness = 0
+}
+
+style "candido-button" = "candido-wider" {
+  	  	xthickness = 0
+  	ythickness = 0
+        bg[PRELIGHT] 	= "#211d17"
+  	bg[NORMAL] 		= "#2a251d"  
+  	bg[SELECTED]	= "#2a251d"
+}
+
+style "candido-scale" = "candido-default" {
+  	xthickness = 3
+  	ythickness = 3
+  	bg[PRELIGHT] 	= "#211d17"  
+  	bg[NORMAL] 		= "#211d17"  
+}
+
+style "candido-entry" = "candido-default"
+{
+  	xthickness = 3
+  	ythickness = 3
+   bg[SELECTED]	    = "#211d17"
+}
+
+#style "candido-notebook" = "candido-wide" {
+# 	
+#		xthickness = 0
+#               ythickness = 0
+#	bg[NORMAL]      = "#181818"  
+#  	bg[INSENSITIVE]  = "#181818"  
+#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+style "candido-tasklist" = "candido-default" {
+  	xthickness = 5
+  	ythickness = 3
+}
+
+style "candido-menu" = "candido-default" {
+  	xthickness = 0
+  	ythickness = 0
+  	bg[NORMAL] = "#211d17"  
+  	text[PRELIGHT] = "#605643"  
+    	bg[SELECTED] = "#211d17"  
+    	base[SELECTED] = "#211d17"  
+}
+
+style "candido-menubar" = "candido-default" {
+  	xthickness = 4
+  	ythickness = 1    
+	#text[PRELIGHT] = "#000000"
+    	#fg[PRELIGHT] = "#f1f1f1"
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+			state = NORMAL
+			file		= "Menu/bg.png"
+			border	= { 0, 0, 0, 1 }
+			stretch	= FALSE
+    		}
+
+		image
+		{
+			function	= BOX
+			state = ACTIVE
+			file		= "Menu/bg.png"
+			border	=  { 0, 0, 0, 1 }
+			stretch	= FALSE
+    		}
+
+		image
+		{
+			function	= BOX
+			state = INSENSITIVE
+			file		= "Menu/bg.png"
+			border	=  { 0, 0, 0, 1 }
+			stretch	= FALSE
+    		}
+
+
+
+ 	}
+
+
+}
+
+style "candido-menubar-item" = "candido-default" {
+      	xthickness = 4
+  	ythickness = 1    	
+    text[PRELIGHT] = "#605643"
+    	fg[PRELIGHT]  = "#605643"
+    text[NORMAL] =  "#605643"
+    	fg[NORMAL] = "#605643"
+    	bg[SELECTED] = "#211d17"
+    	base[SELECTED] = "#211d17"
+}
+
+
+style "candido-menu-item" = "candido-default" {
+  	xthickness = 2 # Menu Stuff
+  	ythickness = 2
+    	text[PRELIGHT] ="#ffffff"
+    	fg[PRELIGHT] = "#ffffff"
+    	bg[SELECTED] = "#111111"
+    	base[SELECTED] = "#111111"
+}
+
+style "candido-tree" = "candido-default" {
+  xthickness = 0
+  ythickness = 0
+}
+
+style "candido-frame-title" = "candido-default" {
+  fg[NORMAL] = "#211d17" # Status Bar Type Thing
+}
+
+style "candido-tooltips" = "candido-default" {
+  xthickness = 4
+  ythickness = 4
+  bg[NORMAL] = { 1.0,1.0,0.85 }
+}
+
+style "candido-combo" = "candido-button" {
+}
+
+style "metacity-frame" = "candido-default" {
+  	bg[SELECTED] = "#211d17" # Main Metacity title bar colour
+}
+
+# Evolution uses bg and fg for its ETree instead of base and text like it should
+style "evolution-hack" = "candido-default" {
+  	bg[ACTIVE]   = "#DADADA"
+  	bg[SELECTED] = "#DADADA"
+  	fg[ACTIVE]   = "#ffffff"
+  	fg[SELECTED] = "#ffffff"
+}
+
+style "panelbg"
+{
+  
+ xthickness            			= 0
+  ythickness            			= 0
+
+  	bg[PRELIGHT] 	= "#211d17"
+  	bg[NORMAL] 		= "#211d17"
+  	bg[SELECTED]	= "#211d17"
+
+}
+
+
+style "candido-notebook" = "candido-wide"
+{
+
+  xthickness            			= 0
+  ythickness            			= 0
+  engine "pixmap" 
+    {
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-bottom.png"
+	border			= { 0,0,1,0}
+	stretch			= TRUE
+	gap_side			= TOP
+      }
+    image 
+      {     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-top.png"
+	border			=  { 0,0,0,1}
+	stretch			= TRUE
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-left.png"
+	border			= {  0,1,0,0}
+	stretch			= TRUE
+	gap_side			= RIGHT
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-right.png"
+	border			= {  1,0,0,0}
+	stretch			= TRUE
+	gap_side			= LEFT
+      }	
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-top-active.png"
+	border			=  { 0,0,0,1}
+	stretch			= TRUE
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-bottom-active.png"
+	border			=  { 0,0,1,0}
+	stretch			= TRUE
+	gap_side			= TOP
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-left-active.png"
+	border			= { 0,1,0,0}
+	stretch			= TRUE
+	gap_side			= RIGHT
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-right-active.png"
+	border			= { 1,0,0,0}
+	stretch			= TRUE
+	gap_side			= LEFT
+      }
+
+# How to draw boxes with a gap on one side (ie the page of a notebook)
+
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook.png" 
+	border				= { 5, 5, 5, 5 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-top.png"
+	gap_border     			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= TOP
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook.png"
+	border				= { 5, 5, 5, 5 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-bottom.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook.png"
+	border				= { 5, 5, 5, 5 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-left.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= LEFT
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook.png" 
+	border				= { 5, 5, 5, 5 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-right.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= RIGHT
+      }
+
+# How to draw the box of a notebook when it isnt attached to a tab
+
+    image 
+      {
+     function			= BOX
+	recolorable		= TRUE
+	file					= "Tabs/notebook.png"
+	border			= { 6,6,6,6 }
+	stretch			= TRUE
+      }
+  }
+}
+
+
+
+
+
+############################# SCROLLBAR ####################
+
+style "scrollbar"
+{
+  engine "pixmap" 
+  {
+    image 
+    {
+      function			= BOX
+      recolorable		= TRUE
+      detail				= "trough"
+      file				= "Scrollbars/trough-scrollbar-horiz.png"
+      border			= { 2, 2, 2, 2 }
+      stretch			= TRUE
+      orientation		= HORIZONTAL
+    }
+    image 
+    {
+      function			= BOX
+      recolorable		= TRUE
+      detail				= "trough"
+      file				= "Scrollbars/trough-scrollbar-vert.png"
+      border			= { 2, 2, 2, 2 }
+      stretch			= TRUE
+      orientation		= VERTICAL
+    }
+
+###########x SLIDERS ##################x
+
+  image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= NORMAL
+      file					= "Scrollbars/slider-horiz.png" 
+      border				= { 5, 5, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL
+    }
+  image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= ACTIVE
+      shadow				= IN
+      file					= "Scrollbars/slider-horiz.png" 
+      border				= { 5, 5, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= PRELIGHT
+      file					= "Scrollbars/slider-horiz-prelight.png" 
+      border				= { 5, 5, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= INSENSITIVE
+      file					= "Scrollbars/slider-horiz-insens.png"
+      border				= { 5, 5, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL
+
+    }
+
+#############x verticals################xx
+
+ image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= NORMAL
+      file					= "Scrollbars/slider-vert.png" 
+      border				= { 2, 2, 5, 5}
+      stretch				= TRUE
+      orientation			= VERTICAL
+
+    }
+   image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= ACTIVE
+      shadow				= IN
+      file					= "Scrollbars/slider-vert.png" 
+      border				= { 2, 2, 5, 5}
+      stretch				= TRUE
+      orientation			= VERTICAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= PRELIGHT
+      file					= "Scrollbars/slider-vert-prelight.png" 
+      border				={ 2, 2, 5, 5}
+      stretch				= TRUE
+      orientation			= VERTICAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= INSENSITIVE
+      file					= "Scrollbars/slider-vert-insens.png"
+      border				= { 2, 2, 5, 5}
+      stretch				= TRUE
+      orientation			= VERTICAL
+
+    }
+
+###########x END SLIDERS ##################x
+
+################################################################################
+# SCROLLBAR STEPPERS
+################################################################################
+
+	# Up
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars/stepper-up.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ 	image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars/stepper-up.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars/stepper-up.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars/stepper-up.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= UP
+    }
+
+ ######### DOWN ############
+
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars/stepper-down.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars/stepper-down.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars/stepper-down.png"
+           border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars/stepper-down.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= DOWN
+    }
+
+############ RIGHT ################
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars/stepper-right.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars/stepper-right.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars/stepper-right.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars/stepper-right.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= RIGHT
+    }
+
+############### LEFT ###################
+
+
+    image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= NORMAL
+      file				= "Scrollbars/stepper-left.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= PRELIGHT
+      file				= "Scrollbars/stepper-left.png"
+            border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= ACTIVE
+      file				= "Scrollbars/stepper-left.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function			= STEPPER
+      recolorable		= TRUE
+      state				= INSENSITIVE
+      file				= "Scrollbars/stepper-left.png"
+             border          = { 1, 1, 1, 1 }
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+  	}
+}
+
+style "candido-progressbar" {
+  
+  fg[PRELIGHT]       		= "#ffffff"
+  
+  xthickness            		= 1
+  ythickness            		= 1
+
+  engine "pixmap" 
+  {
+    image
+    {
+      function				= BOX
+      detail					= "trough"
+      file					= "ProgressBar/trough-progressbar-horiz.png"
+      border				= { 2, 2, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL 
+    }
+    image
+    {
+      function				= BOX
+      detail					= "trough"
+      file					= "ProgressBar/trough-progressbar-vert.png"
+      border				= { 2, 2, 2, 2 }
+      stretch				= TRUE
+      orientation			= VERTICAL
+    }
+    image
+    {
+      function				= BOX
+      detail					= "bar"
+      file					= "ProgressBar/progressbar-horiz.png"
+      border				= { 2, 2, 2, 2 }
+      stretch				= TRUE
+      orientation			= HORIZONTAL 
+    } 
+    image
+    {
+      function				= BOX
+      detail					= "bar"
+      file					= "ProgressBar/progressbar-vert.png"
+      border				= { 2, 2, 2, 2 }
+      stretch				= TRUE
+      orientation			= VERTICAL
+    }
+  }
+}
+
+
+
+
+
+
+
+
+class "*Panel*" style "panelbg"
+widget_class "*notif*" style "panelbg"
+widget_class "*Notif*" style "panelbg"
+widget_class "*Tray*" style "panelbg"
+widget_class "*tray*" style "panelbg"
+
+
+widget_class "*Panel*" style "panelbg"
+	
+
+# widget styles
+class "GtkWidget" style "candido-default"
+class "GtkButton" style "candido-button"
+class "GtkScale"  style "candido-scale"
+class "GtkCombo"  style "candido-button"
+class "GtkRange"  style "scrollbar"
+class "GtkFrame"  style "candido-wide"
+class "GtkMenu"   style "candido-menu"
+class "GtkEntry"  style "candido-entry"
+class "GtkMenuItem"    style "candido-menu-item"
+class "GtkNotebook"    style "candido-notebook"
+class "GtkProgressBar" style "candido-progressbar"
+class "MetaFrames" style "metacity-frame"
+class "GtkWindow" style "metacity-frame"
+ 
+class "*MenuBar*"      style "candido-menubar"
+
+widget_class "*MenuItem.*" style "candido-menu-item"
+widget_class "*MenuBar.*"  style "candido-menubar-item"
+
+# combobox stuff
+widget_class "*.GtkComboBox.GtkButton" style "candido-combo"
+widget_class "*.GtkCombo.GtkButton"    style "candido-combo"
+# tooltips stuff
+widget_class "*.tooltips.*.GtkToggleButton" style "candido-tasklist"
+widget "gtk-tooltips" style "candido-tooltips"
+
+# treeview stuff
+widget_class "*.GtkTreeView.GtkButton" style "candido-tree"
+widget_class "*.GtkCTree.GtkButton" style "candido-tree"
+widget_class "*.GtkList.GtkButton" style "candido-tree"
+widget_class "*.GtkCList.GtkButton" style "candido-tree"
+widget_class "*.GtkFrame.GtkLabel" style "candido-frame-title"
+
+# notebook stuff
+widget_class "*.GtkNotebook.*.GtkEventBox" style "candido-notebook"
+widget_class "*.GtkNotebook.*.GtkViewport" style "candido-notebook"
+
+# those should really use base and text colors instead
+widget_class "*GtkCTree*" style "evolution-hack"
+widget_class "*GtkList*" style "evolution-hack"
+widget_class "*GtkCList*" style "evolution-hack"
+widget_class "*.ETree.*" style "evolution-hack"
+
+class "GtkScrollbar"       		style "scrollbar"
