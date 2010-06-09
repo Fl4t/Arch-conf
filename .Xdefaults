@@ -1,0 +1,79 @@
+! ----------------------------------------------------------------------------
+! file:     ~/.Xdefaults
+! author:   Fl4t
+! modified: June 2010
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ----------------------------------------------------------------------------
+
+!Xft font settings -----------------------------------------------------------
+
+Xft.antialias: true
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+
+! Xcursor --------------------------------------------------------------------
+
+Xcursor*theme: Vanilla-DMZ-AA
+Xcursor.size:  16
+
+!URxvt settings --------------------------------------------------------------
+
+URxvt*font: xft:Envy Code R:style=Regular:pixelsize=11
+URxvt*boldFont: xft:Envy Code R:style=Bold:pixelsize=11
+URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=11
+URxvt*boldItalicFont: xft:Envy Code R:style=boldItalic:pixelsize=11
+URxvt*saveLines: 32767
+URxvt*scrollBar: false
+URxvt*loginShell: false
+URxvt*secondaryScroll: true
+URxvt*perl-lib: /usr/lib/urxvt/perl/
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: /usr/bin/firefox
+URxvt*matcher.button: 1
+URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt*visualBell: false
+URxvt*urgentOnBell: false
+URxvt*keysym.C-u: perl:matcher
+URxvt*cutchars: `”()'*<>[]{|}
+URxvt*skipBuiltinGlyphs: true
+URxvt*cursorBlink: false 
+
+! terminal colors ------------------------------------------------------------
+
+! tangoesque scheme
+*background: #181818
+*foreground: #babdb6
+
+! Black (not tango) + DarkGrey
+*color0:  #000000
+*color8:  #555753
+
+! DarkRed + Red
+*color1:  #ff6565
+*color9:  #ff8d8d
+
+! DarkGreen + Green
+*color2:  #93d44f
+*color10: #c8e7a8
+
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+
+! DarkBlue + Blue
+*color4:  #204a87
+*color12: #3465a4
+
+! DarkMangenta + Mangenta
+*color5:  #ce5c00
+*color13: #f57900
+
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
