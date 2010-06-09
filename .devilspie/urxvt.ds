@@ -1,0 +1,9 @@
+(if
+
+(matches (window_class) "URxvt")
+(begin
+    (wintype "dock")
+	(spawn_async (str "transset-df -i " (window_xid) " .90"))
+)
+)
+
