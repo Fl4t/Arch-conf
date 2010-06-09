@@ -1,0 +1,89 @@
+FrameTitle {
+	ButtonRelease = "1" { Actions = "Raise; Focus; ActivateClient" }
+	ButtonRelease = "3" { Actions = "ShowMenu Window" }
+	DoubleClick = "1" { Actions = "MaxFill True True" }
+	Motion = "1" { Threshold = "4"; Actions = "Raise; Move" }
+	# Remove the following line if you want to use click to focus.
+	# Enter = "Any Any" { Actions = "Focus" }
+}
+
+OtherTitle {
+	ButtonRelease = "1" { Actions = "Raise; Focus; ActivateClient" }
+	ButtonRelease = "3" { Actions = "ShowMenu Window" }
+	Motion = "1" { Threshold = "4"; Actions = "Raise; Move" }
+	# Remove the following line if you want to use click to focus.
+	# Enter = "Any Any" { Actions = "Focus" }
+}
+
+Border {
+	TopLeft {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize TopLeft" } }
+	Top {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize Top" } }
+	TopRight {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize TopRight" } }
+	Left {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize Left" } }
+	Right {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize Right" } }
+	BottomLeft {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize BottomLeft" } }
+	Bottom {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize Bottom" } }
+	BottomRight {
+		# Remove the following line if you want to use click to focus.
+		# Enter = "Any Any" { Actions = "Focus" }
+		ButtonPress = "1" { Actions = "Focus; Resize BottomRight" } }
+}
+
+ScreenEdge {
+	Down {
+		ButtonRelease = "3" { Actions = "ShowMenu Root" }
+	}
+	Up {
+		ButtonRelease = "3" { Actions = "ShowMenu Root" }
+	}
+	Left {
+		ButtonRelease = "3" { Actions = "ShowMenu Root" }
+	}
+	Right {
+		ButtonRelease = "3" { Actions = "ShowMenu Root" }
+	}
+}
+
+Client {
+	ButtonPress = "1" { Actions = "Raise; Focus; ActivateClient" }
+	# Enter = "Any Any" { Actions = "Focus" }
+}
+
+Root {
+	ButtonRelease = "3" { Actions = "ShowMenu Root" }
+	ButtonRelease = "7" { Actions = "GoToWorkspace Right" }
+	ButtonRelease = "6" { Actions = "GoToWorkspace Left" }
+	ButtonRelease = "4" { Actions = "GoToWorkspace Up" }
+	ButtonRelease = "5" { Actions = "GoToWorkspace Down" }
+	ButtonRelease = "1" { Actions = "HideAllMenus" }
+}
+
+Menu {
+	Enter = "Any Any" { Actions = "Focus" }
+}
+
+Other {
+	Enter = "Any Any" { Actions = "Focus" }
+	Motion = "1" { Actions = "Focus; Raise; Move" }
+}

@@ -1,0 +1,70 @@
+Rootmenu = "" 	{
+	Entry = "Thunar" { Actions = "Exec thunar &" }
+	Entry = "Bashrun" { Actions = "Exec bashrun &" }
+	Entry = "Terminal" { Actions = "Exec urxvt &" }
+	Submenu = "Apps" 	{
+		Entry = "Firefox" { Actions = "Exec firefox &"}
+		Entry = "Pidgin" { Actions = "Exec pidgin &" }
+		Entry = "Gimp" { Actions = "Exec gimp &" }
+		Entry = "Rhythmbox" { Actions = "Exec rhythmbox &"}
+		}
+	Submenu = "Tools" 	{
+		Entry = "Calc" { Actions = "Exec galculator &" }
+		Entry = "Gvim" { Actions = "Exec gvim &" }
+		} 
+	Submenu = "Style" 	{
+		Entry = "Lxapps" { Actions = "Exec lxappearance &" }
+		Entry = "Nitrogen" { Actions = "Exec nitrogen ~/documents/wallpaper/ &" }
+		}
+	Submenu = "PekWM" {
+		Entry = "Reload" { Actions = "Reload" }
+		Entry = "Restart" { Actions = "Restart" }
+		Separator {}
+		Entry = "Exit" { Actions = "Exit" }
+		}		
+	Submenu = "Time" {
+		Entry = "" { Actions = "Dynamic ~/.pekwm/time1.sh" }
+		Entry = "" { Actions = "Dynamic ~/.pekwm/time2.sh" } 
+		}
+		Separator {}
+	Submenu = "Exit" {
+		Entry = "Reboot" { Actions = "Exec sudo reboot"}
+		Entry = "Shutdown" { Actions = "Exec sudo halt"}
+		}
+}
+
+WindowMenu = "Window Menu" {
+	Entry = "(Un)Stick" { Actions = "Toggle Sticky" }
+	Entry = "(Un)Shade" { Actions = "Toggle Shaded" }
+	Submenu = "Maximize" {
+		Entry = "Full" { Actions = "Toggle Maximized True True" }
+		Entry = "Horizontal" { Actions = "Toggle Maximized True False" }
+		Entry = "Vertical" { Actions = "Toggle Maximized False True" }
+	}
+	Submenu = "Fill" {
+		Entry = "Full" { Actions = "MaxFill True True" }
+		Entry = "Horizontal" { Actions = "MaxFill True False" }
+		Entry = "Vertical" { Actions = "MaxFill False True" }
+	}
+	Submenu = "Stacking" {
+		Entry = "Raise " { Actions = "Raise" }
+		Entry = "Lower" { Actions = "Lower" }
+		Entry = "Always On Top " { Actions = "Toggle AlwaysOnTop" }
+		Entry = "Always Below" { Actions = "Toggle AlwaysBelow" }
+	}
+	Submenu = "Decor" {
+		Entry = "Decor" { Actions = "Toggle DecorBorder; Toggle DecorTitlebar" }
+		Entry = "Border" { Actions = "Toggle DecorBorder" }
+		Entry = "Titlebar" { Actions = "Toggle DecorTitlebar" }
+	}
+	Submenu = "Skip" {
+		Entry = "Menus" { Actions = "Toggle Skip Menus" }
+		Entry = "Focus Toggle" { Actions = "Toggle Skip FocusToggle" }
+		Entry = "Snap" { Actions = "Toggle Skip Snap" }
+	}
+	Entry = "Iconify " { Actions = "Set Iconified" }
+	Entry = "Manual Action" { Actions = "ShowCmdDialog" }
+	Separator {}
+	Entry = "Close" { Actions = "Close" }
+	Entry = "Kill " { Actions = "Kill " }
+}

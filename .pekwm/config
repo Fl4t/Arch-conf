@@ -1,0 +1,91 @@
+Files {
+    Keys = "~/.pekwm/keys"
+    Mouse = "~/.pekwm/mouse"
+    Menu = "~/.pekwm/menu"
+    Start = "~/.pekwm/start"
+    AutoProps = "~/.pekwm/autoproperties"
+    Theme = "~/.pekwm/themes/AXONKOLOR"
+    Icons = "~/.pekwm/icons/"
+}
+
+MoveResize {
+    EdgeAttract = "5"
+    EdgeResist = "10"
+    WindowAttract = "5"
+    WindowResist = "10"
+    OpaqueMove = "True"
+    OpaqueResize = "True"
+}
+
+Screen {
+    Workspaces = "4"
+    WorkspacesPerRow = "0"
+    WorkspaceNames = "Main;Web;Chat;Music"
+    ShowFrameList = "True"
+    ShowStatusWindow = "False"
+    ShowStatusWindowCenteredOnRoot = "True"
+    ShowClientID = "False"
+    ShowWorkspaceIndicator = "500"
+    PlaceNew = "True"
+    FocusNew = "True"
+    ForcusNewChild = "True"
+
+    TrimTitle = "...
+    FullscreenAbove = "True"
+    FullscreenDetect = "True"
+    HonourRandr = "True"
+    HonourAspectRatio = "True"
+    EdgeSize = "30 30 30 30"
+    EdgeIndent = "True"
+    PixmapCacheSize = "20"
+    DoubleClickTime = "400"
+
+    Placement {
+        Model = "CenteredOnParent Smart MouseCentered"
+        Smart {
+            Row = "False"
+            TopToBottom = "False"
+            LeftToRight = "True"
+            OffsetX = "30"
+            OffsetY = "15"
+        }
+    }
+
+    UniqueNames  {
+        SetUnique = "False"
+        Pre = " #"
+        Post = ""
+    }
+}
+
+Menu {
+    DisplayIcons = "False"
+
+    Icons = "Menu" {
+        Minimum = "16x16"
+        Maximum = "16x16"
+    }
+    Select = "Motion MotionPressed"
+    Enter = "Motion MotionPressed"
+    Exec = "ButtonPress"
+}
+
+CmdDialog {
+    HistoryUnique = "True"
+    HistorySize = "1024"
+    HistoryFile = "~/.pekwm/history"
+    HistorySaveInterval = "16"
+}
+
+#Harbour {
+#    OnTop = "True"
+#    MaximizeOver = "False"
+#    Placement = "Bottom"
+#    Orientation = "TopToBottom"
+#    Head = "0"
+
+#    DockApp {
+#        SideMin = "64"
+#        SideMax = "0"
+#    }
+#}

@@ -1,0 +1,79 @@
+INCLUDE = "vars"
+
+Global {
+# - - ----------------------------------------------- - -
+# Simple bindings to most frequently used actions.
+#
+# Adding your own frequently used actions is easy -
+# just copy it over from CHAINS and edit the keypress!
+	# Moving in workspaces
+	KeyPress = "Ctrl Mod1 Left" { Actions = "GotoWorkspace Left" }
+	KeyPress = "Ctrl Mod1 Right" { Actions = "GotoWorkspace Right" }
+	KeyPress = "Ctrl Mod1 Up" { Actions = "GotoWorkspace Up" }
+	KeyPress = "Ctrl Mod1 Down" { Actions = "GotoWorkspace Down" }
+	KeyPress = "Mod4 Left" { Actions = "SendToWorkspace Left" }
+	KeyPress = "Mod4 Right" { Actions = "SendToWorkspace Right" }
+	KeyPress = "Mod4 Down" { Actions = "SendToWorkspace Down" }
+	KeyPress = "Mod4 Up" { Actions = "SendToWorkspace Up" }
+	keyPress = "Mod4 1" { Actions = "SendToWorkspace 1" }
+	keyPress = "Mod4 2" { Actions = "SendToWorkspace 2" }
+	keyPress = "Mod4 3" { Actions = "SendToWorkspace 3" }
+	keyPress = "Mod4 4" { Actions = "SendToWorkspace 4" }
+	keyPress = "Mod4 5" { Actions = "SendToWorkspace 5" }
+	# Simple window management
+	KeyPress = "Mod4 M" { Actions = "Toggle Maximized True True" }
+	KeyPress = "Mod4 F" { Actions = "Toggle FullScreen" }
+	KeyPress = "Mod4 C" { Actions = "MoveToEdge Center" }
+	KeyPress = "Mod4 Q" { Actions = "Close" }
+	KeyPress = "Mod4 X" { Actions = "MoveResize" }
+	KeyPress = "Mod4 D" { Actions = "Toggle DecorTitlebar" }
+	# Menus
+	KeyPress = "Mod4 R" { Actions = "ShowMenu Root" }
+	KeyPress = "Mod4 W" { Actions = "ShowMenu Window" }
+	KeyPress = "Mod1 Tab" { Actions = "ShowMenu Goto" }
+	# External Commands
+        KeyPress = "Ctrl Mod1 Return" { Actions = "killall pekwm" }
+	KeyPress = "Mod4 F1" { Actions = "Exec $TERM" }
+	KeyPress = "Mod4 F2" { Actions = "ShowCmdDialog" }
+}
+# - - ----------------------------------------------- - -
+# Keys when MoveResize is active
+MoveResize {
+	KeyPress = "Left" { Actions = "MoveHorizontal -10" }
+	KeyPress = "Right" { Actions = "MoveHorizontal 10" }
+	KeyPress = "Up" { Actions = "MoveVertical -10" }
+	KeyPress = "Down" { Actions = "MoveVertical 10" }
+	Keypress = "Mod4 Left" { Actions = "ResizeHorizontal -10" }
+	Keypress = "Mod4 Right" { Actions = "ResizeHorizontal 10" }
+	Keypress = "Mod4 Up" { Actions = "ResizeVertical -10" }
+	Keypress = "Mod4 Down" { Actions = "ResizeVertical 10" }
+	Keypress = "s" { Actions = "MoveSnap" }
+	Keypress = "Escape" { Actions = "End" }
+	Keypress = "q" { Actions = "Cancel" }
+	Keypress = "Return" { Actions = "End" }
+}
+
+# Keys for CmdDialog editing
+InputDialog {
+	KeyPress = "Left" { Actions = "CursPrev" }
+	KeyPress = "Right" { Actions = "CursNext" }
+	KeyPress = "BackSpace" { Actions = "Erase;CompleteAbort" }
+	KeyPress = "Return" { Actions = "Exec" }
+	KeyPress = "Escape" { Actions = "Close" }
+	KeyPress = "Up" { Actions = "HistPrev" }
+	KeyPress = "Down" { Actions = "HistNext" }
+        KeyPress = "Tab" { Actions = "Complete" }
+	KeyPress = "Any Any" { Actions = "Insert" }
+}
+
+# Keys working in menus
+Menu {
+	KeyPress = "Down" { Actions = "NextItem" }
+	KeyPress = "Up" { Actions = "PrevItem" }
+	KeyPress = "Left" { Actions = "LeaveSubmenu" }
+	KeyPress = "Right" { Actions = "EnterSubmenu" }
+	KeyPress = "Return" { Actions = "Select" }
+	KeyPress = "space" { Actions = "Select" }
+	KeyPress = "Escape" { Actions = "Close" }
+	KeyPress = "Q" { Actions = "Close" }
+}
