@@ -5,3 +5,8 @@
     diff = auto
     status = auto
     branch = auto
+[alias]
+    co = commit
+    ch = checkout
+    st = status
+    br = branch
