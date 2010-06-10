@@ -2,7 +2,7 @@ set nocompatible " use gVim defaults
 set encoding=utf-8
 syntax on " enable syntax highlighting
 
-set shell=/bin/zsh
+set shell=/bin/bash
 set vb
 set t_vb=
 set foldenable
@@ -12,8 +12,8 @@ set tabstop=4 " a n-space tab width
 set shiftwidth=4 " allows the use of < and > for VISUAL indenting
 set softtabstop=4 " counts n spaces when DELETE or BCKSPCE is used
 set textwidth=80
-"set autoindent " auto indents next new line
-"set cindent" intelligent indenting
+set autoindent " auto indents next new line
+set cindent" intelligent indenting
 set hlsearch " highlight all search results
 set incsearch " increment search
 set ignorecase " case-insensitive search
@@ -21,7 +21,7 @@ set smartcase " upper-case sensitive search
 set backspace=indent,eol,start
 set history=500 " 100 lines of command line history
 set cmdheight=1 " command line height
-set laststatus=2 " occasions to show status line, 2=always.
+set laststatus=1 " occasions to show status line, 2=always.
 set ruler " ruler display in status line
 set showmode " show mode at bottom of screen
 set number " show line numbers
