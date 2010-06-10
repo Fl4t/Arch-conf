@@ -2,7 +2,7 @@
 # /home/fl4t/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Mon Jun  7 02:53:43 2010
+# Generated on Thu Jun 10 21:59:18 2010
 #
 
 # ConfigProperties:
@@ -32,7 +32,7 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/AllowFlipping=1
 0/FSAAAppControlled=1
 0/LogAnisoAppControlled=1
-0/OpenGLImageSettings=1
+0/OpenGLImageSettings=0
 0/FSAAAppEnhanced=0
 0/RedBrightness=0.000000
 0/GreenBrightness=0.000000
