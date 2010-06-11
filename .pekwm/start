@@ -24,6 +24,7 @@ fi
 #Pour OpenOffice
 export OOO_FORCE_DESKTOP=gnome &
 
+urxvtd -q -f -o
 nitrogen --restore &
 #devilspie &
 #cairo-compmgr -n &
