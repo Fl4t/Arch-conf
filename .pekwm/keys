@@ -32,7 +32,6 @@ Global {
 	KeyPress = "Mod4 W" { Actions = "ShowMenu Window" }
 	KeyPress = "Mod1 Tab" { Actions = "ShowMenu Goto" }
 	# External Commands
-        KeyPress = "Ctrl Mod1 Return" { Actions = "killall pekwm" }
 	KeyPress = "Mod4 F1" { Actions = "Exec $TERM" }
 	KeyPress = "Mod4 F2" { Actions = "ShowCmdDialog" }
 }
