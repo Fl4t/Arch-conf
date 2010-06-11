@@ -1,7 +1,6 @@
 set nocompatible " use gVim defaults
 set encoding=utf-8
 syntax on " enable syntax highlighting
-
 set shell=/bin/bash
 set vb
 set t_vb=
@@ -30,6 +29,7 @@ set showmatch " show matching brackets (),{},[]
 set whichwrap=h,l,<,>,[,]
 set showcmd
 set modeline
+set mouse=a
 set wildmenu
 set splitbelow
 set formatoptions+=l
