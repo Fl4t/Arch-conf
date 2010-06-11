@@ -1,7 +1,7 @@
 Rootmenu = "" 	{
 	Entry = "Thunar" { Actions = "Exec thunar &" }
 	Entry = "Bashrun" { Actions = "Exec bashrun &" }
-	Entry = "Terminal" { Actions = "Exec urxvt &" }
+	Entry = "Terminal" { Actions = "Exec urxvtc &" }
 	Submenu = "Apps" 	{
 		Entry = "Firefox" { Actions = "Exec firefox &"}
 		Entry = "Pidgin" { Actions = "Exec pidgin &" }
