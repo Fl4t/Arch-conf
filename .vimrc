@@ -26,6 +26,8 @@ set wildmode=longest:full,full
 
 " use Vim defaults
 set nocompatible
+
+" Encodage par defaut
 set encoding=utf-8
 
 " enable syntax highlighting
@@ -82,8 +84,7 @@ set selection=inclusive
 set autowrite
 
 " Curseur & Co.
-function! s:Cursor0ldPosition()
-"Ouverture des fichiers avec le curseur à la position de la dernière édition
+function! s:Cursor0ldPosition() "Ouverture des fichiers avec le curseur à la position de la dernière édition
 	if line("'\"") > 0 && line("'\"") <= line("$")
 		exe "normal g`\""
 	endif
