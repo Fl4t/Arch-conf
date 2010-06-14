@@ -28,7 +28,8 @@ urxvtd -q -f -o
 nitrogen --restore &
 #devilspie &
 #cairo-compmgr -n &
-xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+#xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+xcompmgr -c -C -r 2 -l 0 -t 0
 #urxvt &
 #firefox &
 #pidgin &
