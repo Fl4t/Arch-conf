@@ -74,8 +74,8 @@ Root {
 	ButtonRelease = "3" { Actions = "ShowMenu Root" }
 	ButtonRelease = "7" { Actions = "GoToWorkspace Right" }
 	ButtonRelease = "6" { Actions = "GoToWorkspace Left" }
-	ButtonRelease = "4" { Actions = "GoToWorkspace Up" }
-	ButtonRelease = "5" { Actions = "GoToWorkspace Down" }
+#ButtonRelease = "4" { Actions = "GoToWorkspace Up" }
+#ButtonRelease = "5" { Actions = "GoToWorkspace Down" }
 	ButtonRelease = "1" { Actions = "HideAllMenus" }
 }
 

@@ -4,14 +4,14 @@ Files {
     Menu = "~/.pekwm/menu"
     Start = "~/.pekwm/start"
     AutoProps = "~/.pekwm/autoproperties"
-    Theme = "~/.pekwm/themes/AXONKOLOR"
+    Theme = "~/.pekwm/themes/Dyne-ASN/"
     Icons = "~/.pekwm/icons/"
 }
 
 MoveResize {
-    EdgeAttract = "5"
+    EdgeAttract = "15"
     EdgeResist = "10"
-    WindowAttract = "5"
+    WindowAttract = "15"
     WindowResist = "10"
     OpaqueMove = "True"
     OpaqueResize = "True"
@@ -19,8 +19,8 @@ MoveResize {
 
 Screen {
     Workspaces = "4"
-    WorkspacesPerRow = "0"
-    WorkspaceNames = "Main;Web;Chat;Music"
+    WorkspacesPerRow = "2"
+    WorkspaceNames = "Main;Web;Code;Other"
     ShowFrameList = "True"
     ShowStatusWindow = "False"
     ShowStatusWindowCenteredOnRoot = "True"
@@ -35,7 +35,7 @@ Screen {
     FullscreenDetect = "True"
     HonourRandr = "True"
     HonourAspectRatio = "True"
-    EdgeSize = "30 30 30 30"
+    EdgeSize = "0 0 0 0"
     EdgeIndent = "True"
     PixmapCacheSize = "20"
     DoubleClickTime = "400"
@@ -46,8 +46,8 @@ Screen {
             Row = "False"
             TopToBottom = "False"
             LeftToRight = "True"
-            OffsetX = "30"
-            OffsetY = "15"
+            OffsetX = "80"
+            OffsetY = "40"
         }
     }
 

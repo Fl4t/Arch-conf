@@ -1,7 +1,6 @@
-(if
-
-(matches (window_name) "")
-	(begin
-		(spawn_async (str "transset-df -i " (window_xid) " .90"))
-)
-)
+#(if
+#(matches (window_name) "")
+#	(begin
+#		(spawn_async (str "transset-df -i " (window_xid) " .90"))
+#)
+#)

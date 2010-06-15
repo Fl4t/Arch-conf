@@ -71,6 +71,8 @@ Menu {
 	KeyPress = "Up" { Actions = "PrevItem" }
 	KeyPress = "Left" { Actions = "LeaveSubmenu" }
 	KeyPress = "Right" { Actions = "EnterSubmenu" }
+	KeyPress = "Mod1 n" { Actions = "NextItem" }
+	KeyPress = "Mod1 p" { Actions = "PrevItem" }
 	KeyPress = "Return" { Actions = "Select" }
 	KeyPress = "space" { Actions = "Select" }
 	KeyPress = "Escape" { Actions = "Close" }

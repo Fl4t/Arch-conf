@@ -2,7 +2,7 @@
 #  by lyrae (thrynk.deviantart.com) mod fl4t
 #  Date: 10.11.09
 
-$font = "micro-6Left#XFT"
+$font = "Cure-6Left#XFT"
 
 PDecor {
 	Decor = "Default" {

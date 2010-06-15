@@ -1,4 +1,8 @@
 lxappearanc
 lxappearance
 thunar
+killall tint2
+tint2
 exit
+killall conky
+conky
