@@ -1,0 +1,35 @@
+double_buffer yes
+
+own_window yes
+own_window_transparent yes
+own_window_class Conkyvar
+own_window_type desktop 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+draw_borders no
+draw_shades no
+
+gap_x 10
+gap_y 38
+alignment bottom_left
+
+update_interval 1
+default_color e0e0e0
+
+use_xft yes
+xftfont Cure:size=8
+
+use_spacer none
+
+#cpu_avg_samples 2
+#net_avg_samples 2
+#no_buffers yes
+#text_buffer_size 2048
+
+minimum_size 500 0
+maximum_width 600
+
+override_utf8_locale yes
+
+TEXT
+${exec tail /var/log/pacman.log}
