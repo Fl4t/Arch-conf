@@ -1,0 +1,107 @@
+style "eog-window"
+{
+	xthickness              = 0
+	ythickness              = 0
+	
+	GtkWidget::shadow_type			= GTK_SHADOW_NONE
+	GtkWidget::draw_border			= {0,0,0,0}
+	GtkScrolledWindow::scrollbar-spacing	= 0
+	GtkScrolledWindow::shadow_type		= GTK_SHADOW_NONE	
+
+	base[NORMAL] 		= "#555753"
+
+
+	bg[NORMAL] 		= "#555753"
+	bg[ACTIVE]		= "#434241"
+	bg[PRELIGHT]		= "#434241"
+	bg[SELECTED]		= "#2E3436"
+
+	fg[NORMAL]              = "#EEEEEC"
+	fg[PRELIGHT]            = "#EEEEEC"
+	fg[SELECTED]            = "#EEEEEC"
+	fg[ACTIVE]              = "#EEEEEC"
+	fg[INSENSITIVE]         = @bg_color
+
+	text[NORMAL]      	= "#EEEEEC"
+	text[PRELIGHT]    	= "#EEEEEC"
+	text[ACTIVE]      	= "#EEEEEC"
+	text[SELECTED]   	= "#EEEEEC"
+
+}
+
+style "eog-statusbar"
+{
+	xthickness                    = 6
+	ythickness                    = 4
+}
+
+style "eog-toolbar-button" = "button" 
+{
+
+	fg[INSENSITIVE] = shade (5.0, @fg_color)
+	text[INSENSITIVE]   = shade (5.0, @fg_color)
+
+	xthickness = 2
+	ythickness = 2
+
+engine "murrine" {
+		contrast 	    = 1.0
+		highlight_shade	    = 1.02
+		lightborder_shade   = 1.7
+		gradient_shades     = {1.3,1.25,1.01,0.92} 
+		border_shades 	    = {1.03,0.8}
+		shadow_shades	    = {0.5,0.0}
+		reliefstyle 	    = 3
+	}
+
+}
+
+style "eog-toolbar" = "toolbar" 
+{
+
+	fg[INSENSITIVE] = shade (5.0, @fg_color)
+	text[INSENSITIVE]   = shade (5.0, @fg_color)
+
+	xthickness = 2
+	ythickness = 2
+
+
+}
+
+style "eog-menubar"
+{
+	xthickness = 2
+	ythickness = 2
+
+	bg[NORMAL] = @bg_color
+	bg[SELECTED] =  shade (0.99, @selected_bg_color)
+	bg[PRELIGHT] = shade (0.99, @selected_bg_color)
+	fg[NORMAL] = @menu_fg_color
+	fg[PRELIGHT] = @selected_fg_color
+	fg[SELECTED] = @selected_fg_color
+	text[PRELIGHT] = @selected_fg_color
+
+
+	engine "murrine" {
+		roundness = 1
+		gradient_shades		= {1.07,1.05,1.04,1.0} 
+		glazestyle 		= 0
+		highlight_shade		= 1.0 
+		contrast		= 0.5
+		lightborder_shade	= 1.15
+		lightborderstyle 	= 1
+		glow_shade              = 1.0
+	}
+}
+
+
+
+
+
+widget_class "*Eog*Window*"					style "eog-window"
+widget_class "*Eog*Toolbar*GtkButton*"              			style "eog-toolbar-button"
+widget_class "*Eog*Toolbar*"              			style "eog-toolbar"
+widget_class "*Eog*Menu*"               			style "eog-menubar"
+widget_class "Eog*Statusbar*"                  			style "eog-statusbar"
+widget "Eog*Statusbar*.*"                      			style "eog-statusbar"
+widget_class "Eog*Scrollbar"           				style "scrollbar-dark"
