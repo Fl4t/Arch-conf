@@ -21,10 +21,10 @@ Xcursor.size:  16
 
 !URxvt settings --------------------------------------------------------------
 
-URxvt*font: xft:gohufont:style=Regular:pixelsize=10
-URxvt*boldFont: xft:gohufont:style=Bold:pixelsize=10
-URxvt*italicFont: xft:gohufont:style=Italic:pixelsize=10
-URxvt*boldItalicFont: xft:gohufontstyle=boldItalic:pixelsize=10
+URxvt*font: xft:profont:style=Regular:pixelsize=12
+URxvt*boldFont: xft:profont:style=Bold:pixelsize=12
+URxvt*italicFont: xft:profont:style=Italic:pixelsize=12
+URxvt*boldItalicFont: xft:profont=boldItalic:pixelsize=12
 URxvt*saveLines: 32767
 Urxvt*borderless: true
 URxvt*scrollBar: false
@@ -41,16 +41,16 @@ URxvt*keysym.C-u: perl:matcher
 URxvt*cutchars: `”()'*<>[]{|}
 URxvt*skipBuiltinGlyphs: true
 URxvt*cursorBlink: false 
-URxvt*geometry: 185x41
+URxvt*geometry: 145x41
 
 ! terminal colors ------------------------------------------------------------
 
 *background: #181818
 *foreground: #babdb6
 
-!#include "/home/fl4t/.colorsheme/flashy.color"
+#include "/home/fl4t/.colorsheme/flashy.color"
 !#include "/home/fl4t/.colorsheme/jasonwryan.color"
-#include "/home/fl4t/.colorsheme/necromancer.color"
+!#include "/home/fl4t/.colorsheme/necromancer.color"
 !#include "/home/fl4t/.colorsheme/tangoesque.color"
 !#include "/home/fl4t/.colorsheme/thayer.color"
 !#include "/home/fl4t/.colorsheme/trapd00r.color"
