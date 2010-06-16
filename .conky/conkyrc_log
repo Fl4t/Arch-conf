@@ -60,6 +60,8 @@ override_utf8_locale yes
 #${exec echo -e '/`           `\'}
 
 TEXT
+${exec sudo tail /var/log/pacman.log}
+
 ${exec echo -e '                     __       ___'}                                
 ${exec echo -e '                    /\ \     /\_ \    __'}                          
 ${exec echo -e '  ___     _ __   ___\ \ \___ \//\ \  /\_\    ___   __  __  __  _'}  

@@ -9,7 +9,6 @@ own_window_hints undecorate,sticky,skip_taskbar,skip_pager
 
 #borders
 draw_borders no
-border_margin 3
 
 #shades
 draw_shades no
