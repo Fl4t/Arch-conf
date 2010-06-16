@@ -17,7 +17,7 @@ update_interval 1
 default_color FFFFFF
 
 use_xft yes
-xftfont Envy Code R:size=8
+xftfont profont:size=8
 use_spacer none
 
 #cpu_avg_samples 2
@@ -60,6 +60,8 @@ override_utf8_locale yes
 #${exec echo -e '/`           `\'}
 
 TEXT
+${exec tail /home/fl4t/README}
+
 ${exec sudo tail /var/log/pacman.log}
 
 ${exec echo -e '                     __       ___'}                                
