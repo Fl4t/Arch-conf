@@ -4,5 +4,5 @@ thunar
 killall tint2
 exit
 conky
-killall conky
 tint2
+killall conky

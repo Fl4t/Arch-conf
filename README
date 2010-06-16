@@ -1,1 +1,9 @@
-all config for archlinux
+set new font on all apps
+take 4 script of Xdefaults wiki page
+font on root mode fix
+tail fast
+fix sensors temp
+fix F11 Fullscreen
+fix goto workspace when apps launch
+test dwm
+test weechat
