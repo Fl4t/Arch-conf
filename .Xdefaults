@@ -40,8 +40,16 @@ URxvt*keysym.C-u: perl:matcher
 URxvt*cutchars: `”()'*<>[]{|}
 URxvt*skipBuiltinGlyphs: true
 URxvt*cursorBlink: false 
-Urxvt*geometry: 220x85
+URxvt*geometry: 185x41
 
 ! terminal colors ------------------------------------------------------------
 
-#include "/home/fl4t/.colorsheme/tangoesque.color"
+*background: #181818
+*foreground: #babdb6
+
+!#include "/home/fl4t/.colorsheme/flashy.color"
+!#include "/home/fl4t/.colorsheme/jasonwryan.color"
+#include "/home/fl4t/.colorsheme/necromancer.color"
+!#include "/home/fl4t/.colorsheme/tangoesque.color"
+!#include "/home/fl4t/.colorsheme/thayer.color"
+!#include "/home/fl4t/.colorsheme/trapd00r.color"

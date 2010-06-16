@@ -1,286 +1,377 @@
 #!/usr/bin/perl
-#
-# @title : Theme info script 0.1.2 revisited
-# @author: rab
-# @date  : 08/04/08
-# @commnt: Maybe if people quit forking the hell outta this, it would be easier to maintain
+use Switch;
+use strict;
+use File::Basename;
 
-## Configurations
-# On = 1. Off = 0
-my %display = (
-                "OS"        => 1, # Displays the operating system's name
-                "KL"        => 1, # Displays your kernel version
-                "DE"        => 0, # Displays your desktop environment, if you have one
-                "WM"        => 1, # Displays your window manager
-                "WMT"       => 1, # Displays your window manager's theme
-                "IC"        => 1, # Displays your icon theme, if you have one
-                "FN"        => 1, # Displays your font 
-                "UI"        => 1  # Displays your UI theme
-              );
+####################
+## Config options ##
+####################
 
-# The command to execute for taking a screenshot
-# Escape ' with a backslash, \'
-# Leave blank if you don't want a screenshot taken
-#my $screenshot = 'scrot screen-%H-%M-%S.png -e \'mv $f ~/media/screens/\'';
-my $screenshot = '';
+## What distro logo to use to use, Available "Archlinux Debian Ubuntu None" ##
+my $distro = "Archlinux";
+my $myArchVersion = "ArchLinux (X owned ATI)";
 
-# The Color to use for the variables, needs to be global for logos.pl
-@colors = ( "\e[38;0;33m", "\e[38;1;37m", "\e[m" );
+## what values to display. Use "OS Kernel DE WM win_theme Theme Font Icons" ##
+my $display = "OS Kernel DE WM Win_theme Theme Icons Font Background";
 
-# Debugging
-my $debug = 1;
-## End of configuration
+## Takes a screen shot if set to 0 ##
+my $shot = 0;
+## Command to run to take screen shot ##
+#my $command = "scrot -d 15";
+
+## What colors to use for the variables. ##
+my $textcolor = "\e[0m";
+
+## Prints little debugging messages if set to 0 ##
+my $quite = 1;
+
+
 
 ########################
 ## Script starts here ##
 ########################
-@distros = ();
-require '/home/fl4t/scripts/logos.pl';
+## Define some thing to work with strict ##
+my @line = ();
+my $found = 0;
+my $DE = "NONE";
+my $WM = "Beryl";
 
-my $nocolor = "\e[0m";
-my @info = ();
-my ($DE,$WM,$theme,$icon,$font,$cscheme) = "";
-my $distro = &distro;
-
-## Hash of WMs and the process they run #
-my %WMlist = ("Beryl"           => "beryl",
-              "Fluxbox"         => "fluxbox",
-              "Openbox"         => "openbox",
-              "Blackbox"        => "blackbox",
-              "Xfwm4"           => "xfwm4",
-              "Metacity"        => "metacity",
-              "Kwin"            => "kwin",
-              "FVWM"            => "fvwm",
-              "Enlightenment"   => "enlightenment",
-              "IceWM"           => "icewm",
-              "Window Maker"    => "wmaker",
-              "Compiz-Fusion"   => "compiz",
-              "PekWM"           => "pekwm",
-              "Awesome"         => "awesome",
-              "Dwm"             => "dwm" );
+## Hash of WMs and the process they run ##
+my %WMlist = ("Beryl", "beryl",
+              "Fluxbox", "fluxbox",
+              "Openbox", "openbox",
+              "Blackbox", "blackbox",
+              "Xfwm4", "xfwm4",
+              "Metacity", "metacity",
+              "Kwin", "kwin",
+              "FVWM", "fvwm",
+              "Enlightenment", "enlightenment",
+              "IceWM", "icewm",
+              "Window Maker", "wmaker",
+              "PekWM","pekwm",
+              "Awesome","awesome");
 
 ## Hash of DEs and the process they run ##     
-my %DElist = ("Gnome"   => "gnome-session",
-              "Xfce4"   => "xfce-mcs-manage",
-              "KDE"     => "ksmserver");
+my %DElist = ("Gnome", "gnome-session",
+              "Xfce4", "xfce-mcs-manage",
+              "KDE", "ksmserver");
 
 ## Get Kernel version ##
-if( $display{KL} ) {
-    print "::$colors[0] Finding Kernel version$nocolor\n" 
-        if $debug;
-
-    my $kernel = `uname -r`; $kernel =~ s/\s+/ /g;
-    push @info, "$colors[0]Kernel\t\t\t$colors[1]$kernel$nocolor";
+if ( $display =~ "Kernel"){
+  print "\::$textcolor Finding Kernel version\n" unless $quite == 1;
+  my $kernel = `uname -r`;
+  $kernel =~ s/\s+/ /g;
+  $kernel = " Kernel:$textcolor $kernel";
+  push(@line, "$kernel");
 }
 
 ## Find running processes ##
-print "::$colors[0] Getting processes$nocolor\n" 
-    if $debug;
+print "\::$textcolor Getting processes \n" unless $quite == 1;
 my $processes = `ps -A | awk {'print \$4'}`;
 
-
-## Find a Desktop Environment ##
-DESKTOP:
-goto WINDOWM if !$display{DE};
-while(my($DEname,$DEprocess) = each(%DElist)) {
-    next if $processes !~ /$DEprocess/s;
-
+## Find DE ##
+while( (my $DEname, my $DEprocess) = each(%DElist) ) {
+  print "\::$textcolor Testing $DEname process: $DEprocess \n" unless $quite == 1;
+  if ( $processes =~ m/$DEprocess/ ) {
     $DE = $DEname;
-    print "::$colors[0] Desktop Environment found as $colors[1]$DEname$nocolor\n" 
-        if $debug;
-    push @info, "$colors[0]Desktop Environment\t$colors[1]$DEname$nocolor";
+    print "\::$textcolor DE found as $DE\n" unless $quite == 1;
+    if( $display =~ m/DE/ ) {
+      push(@line, " DE:$textcolor $DE");
+    }
     last;
+  }
 }
 
-## Find a Window Manager ##
-WINDOWM:
-goto ICON if !$display{WM};
-while(my($WMname,$WMprocess) = each(%WMlist)) {
-    next if $processes !~ /$WMprocess/sg;
-
+## Find WM ##
+while( (my $WMname, my $WMprocess) = each(%WMlist) ) {
+ print "\::$textcolor Testing $WMname process: $WMprocess \n" unless $quite == 1;
+  if ( $processes =~ m/$WMprocess/ ) {
     $WM = $WMname;
-    print "::$colors[0] Window Manager found as $colors[1]$WMname$nocolor\n" 
-        if $debug;
-    push @info, "$colors[0]Window Manager\t\t$colors[1]$WMname$nocolor";
+    print "\::$textcolor WM found as $WM\n" unless $quite == 1;
+    if( $display =~ m/WM/ ) {
+      push(@line, " WM:$textcolor $WM");
+    }
     last;
+  }
 }
 
-## Find a Window Manager Theme ##
-WINDOWMT:
-goto ICON if !$display{WMT} || !$display{WM} || $WM eq "";
-print "::$colors[0] Finding $WM theme$nocolor\n" 
-    if $debug;
-
-$WM eq "Openbox" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.config/openbox/rc.xml"], ["<name>(.+?)</name>"]);
-    goto ICON;
-};
-
-$WM eq "Beryl" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.emerald/theme/theme.ini"], ["description=(.*?)$/"]);
-    goto ICON;
-};
-
-$WM eq "Metacity" && do {
-    $theme = `gconftool-2 -g /apps/metacity/general/theme`;
-    chomp $theme;
-    goto ICON;
-};
-
-$WM eq "Fluxbox" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.fluxbox/init"], ["session.styleFile:\s*/.*?/(.+?)"]);
-    goto ICON;
-};
-
-$WM eq "Blackbox" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.blackboxrc"], ["session.styleFile:\s*/.*?/(.+?)"]);
-    goto ICON;
-};
-
-$WM eq "Xfwm4" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.config/xfce4/mcs_settings/xfwm4.xml"], ["<option name=\"Xfwm/ThemeName\" type=\"string\" value=\"(.+?)\"/>"]);
-    goto ICON;
-};
-
-$WM eq "Kwin" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.kde/share/config/kwinrc"], ['PluginLib=kwin[34]_(.+?)\s']);
-    goto ICON;
-};
-
-$WM eq "Enlightenment" && do {
-    my $remote = `enlightenment_remote -theme-get theme`;
-    ($theme) = $remote =~ /FILE="(.+?)\\.edj"/sg;
-    goto ICON;
-};
-
-$WM eq "IceWM" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.icewm/theme"], ["Theme=\"(.+?)/.*?\\.theme"]);
-    goto ICON;
-};
-
-$WM eq "PekWM" && do {
-    ($theme) = fgrep(["$ENV{HOME}/.pekwm/config"], ["Theme.*?/(.*?)"]);
-    goto ICON;
-};
-
-$WM eq "Dwm" && do {
-    undef $theme; ## Unless you want to grab some values from the binary?
-    goto ICON;
-};
-
-$WM eq "Awesome" && do {
-    undef $theme;
-    goto ICON;
-};
-
-ICON:
-if( $theme ne "" ) {
-    print "::$colors[0] $WM Theme found as $colors[1]$theme$nocolor\n" 
-        if $debug;
-    push @info, "$colors[0]$WM Theme $colors[1]\t\t$theme$nocolor";
-}
-
-$DE eq "Gnome" && do {
-    $icon = `gconftool-2 -g /desktop/gnome/interface/icon_theme`;
-    $font = `gconftool-2 -g /desktop/gnome/interface/font_name`;
-    $theme = `gconftool-2 -g /desktop/gnome/interface/gtk_theme`;
-    chomp $icon; chomp $font; chomp $theme; 
-    goto PRINT;
-};
-
-$DE eq "Xfce4" && do {
-    ($icon,$font,$theme) = fgrep(["$ENV{HOME}/.config/xfce4/mcs_settings/gtk.xml"],
-                             ['<option name="Net/IconThemeName" type="string" value="(.+?)"/>',
-                              '<option name="Gtk/FontName" type="string" value="(.+?)"/>',
-                              '<option name="Net/ThemeName" type="string" value="(.+?)"/>']);
-    goto PRINT;
-};
-
-$DE eq "KDE" && do {
-    ($theme,$cscheme,$icon,$font) = fgrep(["$ENV{HOME}/.kde/share/config/kdeglobals"],
-                                      ['widgetStyle=(.+?)\s',
-                                       'colorScheme=(.+?)\.kcsrc\s',
-                                       'Theme=(.+?)\s',
-                                       'font=(.+?)\s']);
-    $font = (split /,/, $font)[0];
-    goto PRINT;
-};
-
-@vars = fgrep(["$ENV{HOME}/.gtkrc-2.0",
-               "$ENV{HOME}/.gtkrc.mine"], 
-              ['include ".*?themes/(.+?)/gtk-[12]\.0/gtkrc',
-               '.*?gtk-icon-theme-name.*?"(.+?)"',
-               '.*?gtk-font-name.*?"(.+?)"']);
-
-$theme = $vars[0] ? $vars[0] : $vars[3] ? $vars[3] : "";
-$icon  = $vars[1] ? $vars[1] : $vars[4] ? $vars[4] : "";
-$font  = $vars[2] ? $vars[2] : $vars[5] ? $vars[5] : "";
-
-## Lets print this bitch ##
-PRINT:
-push @info, $colors[0].($DE ? $DE : "GTK")." Theme \t\t$colors[1]".($DE eq "KDE" ? "$theme/$cscheme" : $theme).$nocolor
-    if $display{UI} && $theme ne "";
-
-push @info, "$colors[0]Icons\t\t\t$colors[1]$icon$nocolor"
-    if $display{IC} && $icon ne "";
-
-push @info, "$colors[0]Font\t\t\t$colors[1]$font$nocolor"
-    if $display{FN} && $font ne "";
-
-printf $distro, @info; sleep 3;
-exec $screenshot 
-    if $screenshot ne "";
-
-sub fgrep(\@\@) {
-    my($files,$regexps) = @_;
-    my @retvals = ();
-    my $slurp = $/; undef $/;
-
-    foreach my $file (@$files) {
-        next if !(-e $file);
-
-        open FILE, "<", $file || die "$colors[0]Error opening $colors[1]'$file', $colors[0]$!$nocolor\n";
-        $content = <FILE>;
-        close FILE;
-
-        foreach my $regexp (@$regexps) {
-            my $expg = 0; $expg++ while( $regexp =~ /\(.*?\)/g );
-            my @tmp = $content =~ /$regexp/sg;
-            push @tmp, "" while( scalar @tmp < $expg );
-            @retvals = (@retvals,@tmp);
+## Find WM theme ##
+if ( $display =~ m/Win_theme/ ){
+  switch($WM) {
+    case "Openbox" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.config/openbox/rc.xml")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /<name>(.+)<\/name>/ ) {
+          while ( $found == 0 ) {
+            print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+            push(@line, " WM Theme:$textcolor $1");
+            $found = 1;
+          }
         }
+      }
+      close(FILE);
     }
-
-    $/ = $slurp;
-    @retvals;
-}
-
-sub distro {
-    my $distro = "";
-    my $slurp = $/; undef $/;
-
-    foreach $ops (@distros) {
-        next if !(-e @$ops[1]);
-
-        $fdistro = $distro = @$ops[0];
-        open FILE, "<", @$ops[1] || die "$colors[0]Error opening $colors[1]'@$ops[1]', $colors[0]$!$nocolor\n";
-        $content = <FILE>;
-        close FILE;
-        
-        if( defined @$ops[2] ) {
-            $content =~ /@$ops[2]/sg;
-            $fdistro .= "  ($1)";
+    case "Metacity" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      my $gconf = `gconftool-2 -g /apps/metacity/general/theme`;
+      print "\::$textcolor $WM theme found as $gconf\n" unless $quite == 1;
+      chomp ($gconf);
+      push(@line, " WM Theme:$textcolor $gconf");
+    }
+    case "Fluxbox" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.fluxbox/init")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /session.styleFile:.*\/(.+)/ ) {
+          print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+          push(@line, " WM Theme:$textcolor $1");
         }
-        
-        chomp $distro; chomp $fdistro;
-        last;
+      }
+      close(FILE);
     }
+    case "Blackbox" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.blackboxrc")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /session.styleFile:.*\/(.+)/ ) {
+          print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+          push(@line, " WM Theme:$textcolor $1");
+        }
+      }
+      close(FILE);
+    }
+    case "Xfwm4" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.config/xfce4/mcs_settings/xfwm4.xml")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /<option name="Xfwm\/ThemeName" type="string" value="(.+)"\/>/ ) {
+          print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+          push(@line, " WM Theme:$textcolor $1");
+        }
+  } 
+      close(FILE);
+    }
+    case "Kwin" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.kde/share/config/kwinrc")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /PluginLib=kwin3_(.+)/ ) {
+          print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+          push(@line, " WM Theme:$textcolor $1");
+        }
+      }
+      close(FILE);
+    }
+    case "Enlightenment" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      my $remote = `enlightenment_remote -theme-get theme` ;
+      if( $remote =~ m/.*FILE="(.+).edj"/ ) {
+        print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+        push(@line, " WM Theme:$textcolor $1");
+      }     
+    }       
+    case "IceWM" { 
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.icewm/theme")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /Theme="(.+)\/.*.theme/ ) {
+          while( $found == 0 ) {
+            print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+            push(@line, " WM Theme:$textcolor $1");
+            $found = 1;
+          }
+        }
+      }   
+      close(FILE);
+    }   
+    case "PekWM" {
+      print "\::$textcolor Finding $WM theme\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.pekwm/config")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+        if( /Theme.*\/(.*)"/ ) {
+            print "\::$textcolor $WM theme found as $1\n" unless $quite == 1;
+            push(@line, " WM Theme:$textcolor $1");
+        }
+      }
+      close(FILE); 
+    } 
+  }   
+}     
+      
+## Find Theme Icon and Font ##
+if ( $display =~ m/[Theme, Icons, Font, Background]/) {
+  switch($DE) {
+    case "Gnome" {
+      print "\::$textcolor Finding $DE variables\n" unless $quite == 1;
+      if ( $display =~ m/Theme/ ) {
+        my $gconf = `gconftool-2 -g /desktop/gnome/interface/gtk_theme`;
+        chomp ($gconf);
+        print "\::$textcolor GTK Theme found as $1\n" unless $quite == 1;
+        push(@line, " GTK Theme:$textcolor $gconf");
+      }
+      if ( $display =~ m/Icons/ ) {
+        my $gconf = `gconftool-2 -g /desktop/gnome/interface/icon_theme`;
+        chomp ($gconf);
+        push(@line, " Icons:$textcolor $gconf");
+      } 
+      if ( $display =~ m/Font/ ) {
+        my $gconf = `gconftool-2 -g /desktop/gnome/interface/font_name`;
+        chomp ($gconf);
+        push(@line, " Font:$textcolor $gconf");
+      }
+	  if ( $display =~ m/Background/ ) {
+        my $gconf = `gconftool-2 -g /desktop/gnome/background/picture_filename`;
+        chomp ($gconf);
+		my $bname = basename($gconf);
+		push(@line, " Background:$textcolor $bname");
+      }
 
-    return ""
-        if $distro eq "";
-
-    $/ = $slurp; $distro = lc $distro;
-    eval "\$distro = \$$distro;";
-    push @info, "$colors[0]Distro\t\t\t$colors[1]$fdistro$nocolor";
-    $distro;
+    } 
+    case "Xfce4" {
+      my @sort = ();
+      print "\::$textcolor Finding $DE variables\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.config/xfce4/mcs_settings/gtk.xml")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) {
+     if ( $display =~ m/Theme/ ) {
+          if (/<option name="Net\/ThemeName" type="string" value="(.+)"\/>/ ) {
+            print "\::$textcolor GTK Theme found as $1\n" unless $quite == 1;
+            unshift(@sort, " GTK Theme:$textcolor $1");
+          } 
+        }
+        if ( $display =~ m/Icons/ ) {
+          if (/<option name="Net\/IconThemeName" type="string" value="(.+)"\/>/ ) {
+            print "\::$textcolor Icons found as $1\n" unless $quite == 1;
+            unshift(@sort, " Icons:$textcolor $1");
+          }
+        }
+        if ( $display =~ m/Font/ ) {
+          if ( /<option name="Gtk\/FontName" type="string" value="(.+)"\/>/ ) {
+            print "\::$textcolor Font found as $1\n" unless $quite == 1;
+            unshift(@sort, " Font:$textcolor $1");
+          } 
+        }
+      }
+      close(FILE);
+      ## Sort variables so they're ordered "Theme Icon Font" ##
+      foreach my $i (@sort) {
+        push(@line, "$i");
+      }
+    } 
+    case "KDE" { 
+      print "\::$textcolor Finding $DE variables\n" unless $quite == 1;
+      open(FILE, "$ENV{HOME}/.kde/share/config/kdeglobals")
+      || die "\e[0;31m<Failed>\n";
+      while( <FILE> ) { 
+        if ( $display =~ m/Theme/ ) {
+          if ( /widgetStyle=(.+)/  ) {
+            print "\::$textcolor Wiget Style found as $1\n" unless $quite == 1;
+            push(@line, " Wiget Style:$textcolor $1");
+          }
+          if (/colorScheme=(.+).kcsrc/ ) {
+            print "\::$textcolor Color Scheme found as $1\n" unless $quite == 1;
+            push(@line, " Color Scheme:$textcolor $1");
+          }
+        }
+        if ( $display =~ m/Icons/ ) {
+          if ( /Theme=(.+)/ ) {
+            print "\::$textcolor Icons found as $1\n" unless $quite == 1;
+            push(@line, " Icons:$textcolor $1");
+          } 
+        }   
+        if ( $display =~ m/Font/ ) {
+          if ( /font=(.+)/ ) {
+            my $font = (split/,/, $1)[0];
+            print "\::$textcolor Font found as $font\n" unless $quite == 1;
+            push(@line, " Font:$textcolor $font");
+          }
+        }
+      }
+      close(FILE);
+  
+    }
+    else {
+      my @files = ("$ENV{HOME}/.gtkrc-2.0", "$ENV{HOME}/.gtkrc.mine",);
+      foreach my $file (@files) {
+        if ( -e $file ) {
+          print "\::$textcolor Opening $file\n" unless $quite == 1; 
+          open(FILE, $file)
+          || die "\e[0;31m<Failed>\n";
+          while( <FILE> ) {
+            if ( $display =~ m/Theme/ ) {
+              if( /include ".*themes\/(.+)\/gtk-(1|2)\.0\/gtkrc"/ ){
+                print "\::$textcolor GTK theme found as $1\n" unless $quite == 1;
+                push(@line, " GTK Theme:$textcolor $1");
+              }
+            }
+            if ( $display =~ m/Icons/ ) {
+              if( /.*gtk-icon-theme-name.*"(.+)"/ ) {
+                print "\::$textcolor Icons found as $1\n" unless $quite == 1;
+                push(@line, " Icons:$textcolor $1");
+              }
+            }
+            if ( $display =~ m/Font/ ) {
+              if( /.*gtk-font-name.*"(.+)"/ ) {
+                print "\::$textcolor Font found as $1\n" unless $quite == 1;
+                push(@line, " Font:$textcolor $1");
+             }
+            }
+          }
+          close(FILE);
+        }
+      }
+    }
+  }
 }
+
+## Display the system info ##
+
+if ( $distro =~ m/Archlinux/ ) {
+
+## Get Archlinux version ##
+if ( $display =~ "OS"){
+  print "\::$textcolor Finding Archlinux version\n" unless $quite == 1;
+  my $version = $myArchVersion;
+  $version =~ s/\s+/ /g;
+  $version = " OS:$textcolor $version";
+  unshift(@line, "$version");
+}
+
+my $c1 = "\e[1;32m";
+my $c2 = "\e[1;32m";
+
+system("clear");
+
+print "
+${c1}                   -`                   
+${c1}                  .o+`                  
+${c1}                 `ooo/                  
+${c1}                `+oooo:                 
+${c1}               `+oooooo:
+${c1}               -+oooooo+:
+${c1}             `/:-:++oooo+:                       $c1@line[0]
+${c1}            `/++++/+++++++:                      $c1@line[1]
+${c1}           `/++++++++++++++:                     $c1@line[2]
+${c1}          `/+++${c2}ooooooooooooo/`                   $c1@line[3]
+${c2}         ./ooosssso++osssssso+`                  $c1@line[4]
+${c2}        .oossssso-````/ossssss+`                 $c1@line[5]
+${c2}       -osssssso.      :ssssssso.                $c1@line[6]
+${c2}      :osssssss/        osssso+++.               $c1@line[7]
+${c2}     /ossssssss/        +ssssooo/-               $c1@line[8]
+${c2}   `/ossssso+/:-        -:/+osssso+-    
+${c2}  `+sso+:-`                 `.-/+oso:   
+${c2} `++:.                           `-/+/  
+${c2} .`                                  ``
+${c2} 
+\e[0m";
+}
+
+system("scrot -d 1");
