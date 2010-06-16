@@ -21,10 +21,10 @@ Xcursor.size:  16
 
 !URxvt settings --------------------------------------------------------------
 
-URxvt*font: xft:Envy Code R:style=Regular:pixelsize=10
-URxvt*boldFont: xft:Envy Code R:style=Bold:pixelsize=10
-URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=10
-URxvt*boldItalicFont: xft:Envy Code R:style=boldItalic:pixelsize=10
+URxvt*font: xft:gohufont:style=Regular:pixelsize=10
+URxvt*boldFont: xft:gohufont:style=Bold:pixelsize=10
+URxvt*italicFont: xft:gohufont:style=Italic:pixelsize=10
+URxvt*boldItalicFont: xft:gohufontstyle=boldItalic:pixelsize=10
 URxvt*saveLines: 32767
 Urxvt*borderless: true
 URxvt*scrollBar: false
