@@ -41,7 +41,7 @@ URxvt*keysym.C-u: perl:matcher
 URxvt*cutchars: `”()'*<>[]{|}
 URxvt*skipBuiltinGlyphs: true
 URxvt*cursorBlink: false 
-URxvt*geometry: 145x41
+URxvt*geometry: 95x41
 
 ! terminal colors ------------------------------------------------------------
 
