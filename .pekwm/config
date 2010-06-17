@@ -4,15 +4,15 @@ Files {
     Menu = "~/.pekwm/menu"
     Start = "~/.pekwm/start"
     AutoProps = "~/.pekwm/autoproperties"
-    Theme = "~/.pekwm/themes/Dyne-ASN/"
+    Theme = "~/.pekwm/themes/gorgeous"
     Icons = "~/.pekwm/icons/"
 }
 
 MoveResize {
-    EdgeAttract = "15"
+    EdgeAttract = "10"
     EdgeResist = "10"
-    WindowAttract = "15"
-    WindowResist = "10"
+    WindowAttract = "5"
+    WindowResist = "5"
     OpaqueMove = "True"
     OpaqueResize = "True"
 }
@@ -28,17 +28,17 @@ Screen {
     ShowWorkspaceIndicator = "500"
     PlaceNew = "True"
     FocusNew = "True"
-    ForcusNewChild = "True"
+	FocusNewChild = "True"
 
-    TrimTitle = "...
+    TrimTitle = "..."
     FullscreenAbove = "True"
     FullscreenDetect = "True"
     HonourRandr = "True"
     HonourAspectRatio = "True"
-    EdgeSize = "0 0 0 0"
-    EdgeIndent = "True"
+    EdgeSize = "1 1 1 1"
+    EdgeIndent = "False"
     PixmapCacheSize = "20"
-    DoubleClickTime = "400"
+    DoubleClickTime = "350"
 
     Placement {
         Model = "CenteredOnParent Smart MouseCentered"
@@ -61,12 +61,28 @@ Screen {
 Menu {
     DisplayIcons = "False"
 
-    Icons = "Menu" {
+    Icons = "DEFAULT" {
         Minimum = "16x16"
         Maximum = "16x16"
     }
+
+    # To enable make separate window have other icon size restrictions,
+    # for example wallpaper menu found in pekwm_menu_tools, set the following
+    # for each menu you want to "free".
+
+    # Icons = "Wallpaper" {
+    #     Minimum = "64x64"
+    #     Maximum = "64x64"
+    # }
+
+    # Defines how menus act on mouse input.
+    # Possible values are: "ButtonPress ButtonRelease DoubleClick Motion"
+    # To make submenus open on mouse over, comment the default Enter,
+    # uncomment the alternative, and reload pekwm.
+    
     Select = "Motion MotionPressed"
-    Enter = "Motion MotionPressed"
+    Enter = "MotionPressed ButtonPress"
+    # Enter = "Motion"
     Exec = "ButtonPress"
 }
 
@@ -77,15 +93,15 @@ CmdDialog {
     HistorySaveInterval = "16"
 }
 
-#Harbour {
-#    OnTop = "True"
-#    MaximizeOver = "False"
-#    Placement = "Bottom"
-#    Orientation = "TopToBottom"
-#    Head = "0"
+Harbour {
+    OnTop = "True"
+    MaximizeOver = "False"
+    Placement = "Right"
+    Orientation = "TopToBottom"
+    Head = "0"
 
-#    DockApp {
-#        SideMin = "64"
-#        SideMax = "0"
-#    }
-#}
+    DockApp {
+        SideMin = "64"
+        SideMax = "0"
+    }
+}

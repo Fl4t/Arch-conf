@@ -4,15 +4,15 @@
 
 # Background definitions
 # ID 1
-rounded = 0
-border_width = 0
+rounded = 3
+border_width = 1
 background_color = #181818 100
-border_color = #FFFFFF 16
+border_color = #383838 100
 
 # Panel
 panel_monitor = 1
 panel_position = bottom center horizontal
-panel_size = 1660 20
+panel_size = 1660 23
 panel_margin = 0 10
 panel_padding = 0 0 0
 panel_dock = 0
@@ -52,10 +52,10 @@ task_iconified_background_id = 0
 # task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = Cure 8
+task_font = monaco 7
 task_font_color = #babdb6 100
 task_active_font_color = #babdb6 100
-task_urgent_font_color = #985C28 100
+task_urgent_font_color = #454545 100
 task_iconified_font_color = #babdb6 30
 font_shadow = 0
 
@@ -69,7 +69,7 @@ font_shadow = 0
 
 # Clock
 #time1_format = %H:%M
-#time1_font = Cure 8
+#time1_font = monaco 5
 #time2_format = %A %d %B
 #time2_font = sans 6
 #clock_font_color = #babdb6 100

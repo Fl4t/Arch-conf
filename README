@@ -1,6 +1,4 @@
-tail fast
-fix sensors temp
-fix F11 Fullscreen
 fix goto workspace when apps launch
 test dwm
 test weechat
+install mpd & ncpmcpp & in conky

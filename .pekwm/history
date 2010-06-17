@@ -1,8 +1,10 @@
 lxappearanc
 lxappearance
 thunar
-killall tint2
-exit
 conky
-tint2
+<tint2
 killall conky
+exit
+firefox
+killall tint2
+tint2
