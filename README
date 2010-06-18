@@ -1,4 +1,5 @@
 fix goto workspace when apps launch
+fix keys KP for move window in moveresize
 test dwm
-test weechat
-install mpd & ncpmcpp & in conky
+install mpd & ncpmcpp
+fix keys cmd4 down in pekwm keys

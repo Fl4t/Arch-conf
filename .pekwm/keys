@@ -8,11 +8,11 @@ Global {
 # just copy it over from CHAINS and edit the keypress!
 	# Moving in frames
 	KeyPress = "Mod1 Tab" { Actions = "NextFrame EndRaise" }
-	# Moving in workspaces
+# Moving in workspaces
 	KeyPress = "Mod4 Left" { Actions = "SendToWorkspace Left" }
 	KeyPress = "Mod4 Right" { Actions = "SendToWorkspace Right" }
 	KeyPress = "Mod4 Up" { Actions = "SendToWorkspace Up" }
-	KeyPress = "Mod4 Down" { Actions = "SenToWorkspace Down" }
+	KeyPress = "Mod4 Down" { Actions = "SendToWorkspace Down" }
 	KeyPress = "Ctrl Mod1 Left" { Actions = "GotoWorkspace Left" }
 	KeyPress = "Ctrl Mod1 Right" { Actions = "GotoWorkspace Right" }
 	KeyPress = "Ctrl Mod1 Up" { Actions = "GotoWorkspace Up" }
@@ -85,10 +85,10 @@ MoveResize {
 	Keypress = "q" { Actions = "Cancel" }
 	Keypress = "Return" { Actions = "End" }	
 	
-	KeyPress = "Mod4 Left Up" { Actions = "MoveToEdge TopLeft" }
-	KeyPress = "Mod4 Right Up" { Actions = "MoveToEdge TopRight" }
-	KeyPress = "Mod4 Left Down" { Actions = "MoveToEdge BottomLeft" }
-	KeyPress = "Mod4 Right Down" { Actions = "MoveToEdge BottomRight" }
+	KeyPress = "" { Actions = "MoveToEdge TopLeft" }
+	KeyPress = "" { Actions = "MoveToEdge TopRight" }
+	KeyPress = "" { Actions = "MoveToEdge BottomLeft" }
+	KeyPress = "" { Actions = "MoveToEdge BottomRight" }
 	KeyPress = "" { Actions = "MoveToEdge TopCenterEdge" }
 	KeyPress = "" { Actions = "MoveToEdge TopCenterEdge" }
 	KeyPress = "" { Actions = "MoveToEdge TopEdge" }
