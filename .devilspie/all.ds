@@ -1,0 +1,7 @@
+(if
+
+(matches (window_class) "")
+(begin
+	(spawn_async (str "transset-df -i " (window_xid) " .999"))
+)
+)
