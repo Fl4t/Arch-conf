@@ -6,7 +6,7 @@ ythickness = 0
 
   	fg[NORMAL]        = "#c3c3c3"
   	fg[PRELIGHT]      = "#c3c3c3" # text on buttons (hover)
-        fg[ACTIVE]        = "#7dd039" # text on unfocused tabs
+        fg[ACTIVE]        = "#804ea0" # text on unfocused tabs
   
   	
 	bg_pixmap[NORMAL] 		= "Panel/panel-bg.png"

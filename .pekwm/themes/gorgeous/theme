@@ -1,29 +1,30 @@
 Define = "DefaultDecor" {
-	Height = "0"
-	HeightAdapt = "False"
+	Height = "5"
+	Pad = "3 5 5 0"
+	HeightAdapt = "True"
 }
 
 Define = "DefaultBorder" {
 	Border {
 		Focused {
-			TopLeft = "Image menu_border_top_left.png#fixed"
-			Top = "Image menu_border_top.png#tiled"
-			TopRight = "Image menu_border_top_right.png#fixed"
-			Left =  "Image menu_border_left.png#tiled"
-			Right = "Image menu_border_right.png#tiled"
-			BottomLeft = "Image menu_border_bottom_left.png#fixed"
-			Bottom = "Image menu_border_bottom.png#tiled"
-			BottomRight = "Image menu_border_bottom_right.png#tiled"
+			TopLeft = "Image default_border_top_left_focused.png"
+			Top = "Image default_border_top_focused.png"
+			TopRight = "Image default_border_top_right_focused.png"
+			Left =  "Image default_border_left_focused.png"
+			Right = "Image default_border_right_focused.png"
+			BottomLeft = "Image default_border_bottom_left_focused.png"
+			Bottom = "Image default_border_bottom_focused.png"
+			BottomRight = "Image default_border_bottom_right_focused.png"
 		}
 		Unfocused {
-			TopLeft = "Image menu_border_top_left.png#fixed"
-			Top = "Image menu_border_top.png#tiled"
-			TopRight = "Image menu_border_top_right.png#fixed"
-			Left =  "Image menu_border_left.png#tiled"
-			Right = "Image menu_border_right.png#tiled"
-			BottomLeft = "Image menu_border_bottom_left.png#fixed"
-			Bottom = "Image menu_border_bottom.png#tiled"
-			BottomRight = "Image menu_border_bottom_right.png#tiled"
+			TopLeft = "Image default_border_top_left.png"
+			Top = "Image default_border_top.png"
+			TopRight = "Image default_border_top_right.png"
+			Left =  "Image default_border_left.png"
+			Right = "Image default_border_right.png"
+			BottomLeft = "Image default_border_bottom_left.png"
+			Bottom = "Image default_border_bottom.png#tiled"
+			BottomRight = "Image default_border_bottom_right.png"
 		}
 	}
 }
@@ -31,24 +32,24 @@ Define = "DefaultBorder" {
 Define = "MenuBorder" {
 	Border {
 		Focused {
-			TopLeft = "Image menu_border_top_left.png#fixed"
-			Top = "Image menu_border_top.png#tiled"
-			TopRight = "Image menu_border_top_right.png#fixed"
-			Left =  "Image menu_border_left.png#tiled"
-			Right = "Image menu_border_right.png#tiled"
-			BottomLeft = "Image menu_border_bottom_left.png#fixed"
-			Bottom = "Image menu_border_bottom.png#tiled"
-			BottomRight = "Image menu_border_bottom_right.png#tiled"
+			TopLeft = "Image menu_border_top_left.png"
+			Top = "Image menu_border_top.png"
+			TopRight = "Image menu_border_top_right.png"
+			Left =  "Image menu_border_left.png"
+			Right = "Image menu_border_right.png"
+			BottomLeft = "Image menu_border_bottom_left.png"
+			Bottom = "Image menu_border_bottom.png"
+			BottomRight = "Image menu_border_bottom_right.png"
 		}
 		Unfocused {
-			TopLeft = "Image menu_border_top_left.png#fixed"
-			Top = "Image menu_border_top.png#tiled"
-			TopRight = "Image menu_border_top_right.png#fixed"
-			Left =  "Image menu_border_left.png#tiled"
-			Right = "Image menu_border_right.png#tiled"
-			BottomLeft = "Image menu_border_bottom_left.png#fixed"
-			Bottom = "Image menu_border_bottom.png#tiled"
-			BottomRight = "Image menu_border_bottom_right.png#tiled"
+			TopLeft = "Image menu_border_top_left.png"
+			Top = "Image menu_border_top.png"
+			TopRight = "Image menu_border_top_right.png"
+			Left =  "Image menu_border_left.png"
+			Right = "Image menu_border_right.png"
+			BottomLeft = "Image menu_border_bottom_left.png"
+			Bottom = "Image menu_border_bottom.png"
+			BottomRight = "Image menu_border_bottom_right.png"
 		}
 	}
 }
@@ -153,7 +154,7 @@ Menu {
 		Font = "$FONT"
 		Background = "Solid #191919"
 		Item = "Empty"
-		Text = "#a2a2a2"
+		Text = "#804EA0"
 		Arrow = "Image arrow_selected.png#fixed"
 	}
 }
@@ -181,3 +182,4 @@ WorkspaceIndicator {
 	EdgePadding = "6"
 	WorkspacePadding = "3"
 }
+

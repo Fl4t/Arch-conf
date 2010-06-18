@@ -1,0 +1,184 @@
+Define = "DefaultDecor" {
+	Height = "0"
+	HeightAdapt = "False"
+}
+
+Define = "DefaultBorder" {
+	Border {
+		Focused {
+			TopLeft = "Image default_border_top_left_focused.png#fixed"
+			Top = "Image default_border_top_focused.png#tiled"
+			TopRight = "Image default_border_top_right_focused.png#fixed"
+			Left =  "Image default_border_left_focused.png#tiled"
+			Right = "Image default_border_right_focused.png#tiled"
+			BottomLeft = "Image default_border_bottom_left_focused.png#fixed"
+			Bottom = "Image default_border_bottom_focused.png#tiled"
+			BottomRight = "Image default_border_bottom_right_focused.png#fixed"
+		}
+		Unfocused {
+			TopLeft = "Image default_border_top_left.png#fixed"
+			Top = "Image default_border_top.png#tiled"
+			TopRight = "Image default_border_top_right.png#fixed"
+			Left =  "Image default_border_left.png#tiled"
+			Right = "Image default_border_right.png#tiled"
+			BottomLeft = "Image default_border_bottom_left.png#fixed"
+			Bottom = "Image default_border_bottom.png#tiled"
+			BottomRight = "Image default_border_bottom_right.png#fixed"
+		}
+	}
+}
+
+Define = "MenuBorder" {
+	Border {
+		Focused {
+			TopLeft = "Image menu_border_top_left.png#fixed"
+			Top = "Image menu_border_top.png#tiled"
+			TopRight = "Image menu_border_top_right.png#fixed"
+			Left =  "Image menu_border_left.png#tiled"
+			Right = "Image menu_border_right.png#tiled"
+			BottomLeft = "Image menu_border_bottom_left.png#fixed"
+			Bottom = "Image menu_border_bottom.png#tiled"
+			BottomRight = "Image menu_border_bottom_right.png#tiled"
+		}
+		Unfocused {
+			TopLeft = "Image menu_border_top_left.png#fixed"
+			Top = "Image menu_border_top.png#tiled"
+			TopRight = "Image menu_border_top_right.png#fixed"
+			Left =  "Image menu_border_left.png#tiled"
+			Right = "Image menu_border_right.png#tiled"
+			BottomLeft = "Image menu_border_bottom_left.png#fixed"
+			Bottom = "Image menu_border_bottom.png#tiled"
+			BottomRight = "Image menu_border_bottom_right.png#tiled"
+		}
+	}
+}
+
+Define = "LineBorder" {
+	Border {
+		Focused {
+			TopLeft = "Solid #191919 1x1"
+			Top = "Solid #191919 1x1"
+			TopRight = "Solid #191919 1x1"
+			Left = "Solid #191919 1x1"
+			Right = "Solid #191919 1x1"
+			BottomLeft = "Solid #191919 1x1"
+			Bottom = "Solid #191919 1x1"
+			BottomRight = "Solid #191919 1x1"
+		}
+		Unfocused {
+			TopLeft = "Solid #191919 1x1"
+			Top = "Solid #191919 1x1"
+			TopRight = "Solid #191919 1x1"
+			Left = "Solid #191919 1x1"
+			Right = "Solid #191919 1x1"
+			BottomLeft = "Solid #191919 1x1"
+			Bottom = "Solid #191919 1x1"
+			BottomRight = "Solid #191919 1x1"
+		}
+	}
+}
+
+PDecor {
+	Decor = "Default" {
+		Title {
+			@DefaultBorder
+		}
+	}
+
+	Decor = "InputDialog" {
+		Title {
+			@MenuBorder
+		}
+	}
+	
+	Decor = "Menu" {
+		Title {
+			@MenuBorder
+		}
+	}
+
+	Decor = "StatusWindow" {
+		Title {
+			@MenuBorder
+		}
+	}
+
+	Decor = "WorkspaceIndicator" {
+		Title {
+			@MenuBorder
+		}
+	}
+
+	Decor = "Borderless" {
+		Title {
+			@LineBorder
+		}
+	}
+
+	Decor = "Titlebarless" {
+		Title {
+			@DefaultBorder
+		}
+	}
+}
+
+$FONT = "XFT#gelly:size=7"
+
+Harbour {
+	Texture = "Solid #191919"
+}
+
+Menu {
+	Pad = "3 3 3 3"
+
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #191919"
+		Item = "Empty"
+		Text = "#454545"
+		Separator = "Image separator.png#tiled"
+		Arrow = "Image arrow.png#fixed"
+	}
+
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #191919"
+		Item = "Empty"
+		Text = "#454545"
+		Separator = "Image separator.png#tiled"
+		Arrow = "Image arrow.png#fixed"
+	}
+
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #191919"
+		Item = "Empty"
+		Text = "#a2a2a2"
+		Arrow = "Image arrow_selected.png#fixed"
+	}
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #191919"
+	Text = "#a2a2a2"
+	Pad = "4 4 4 4"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #191919"
+	Text = "#a2a2a2"
+	Pad = "4 4 4 4"
+}
+
+WorkspaceIndicator {
+	Font = "$FONT"
+	Background = "Solid #191919"
+	Workspace = "Solid #434343"
+	WorkspaceActive = "Solid #656565"
+	Text = "#a2a2a2"
+	EdgePadding = "6"
+	WorkspacePadding = "3"
+}
+

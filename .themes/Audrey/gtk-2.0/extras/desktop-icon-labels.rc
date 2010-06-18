@@ -1,0 +1,7 @@
+style "desktop-icon" {
+  NautilusIconContainer::frame_text = 1
+  text[NORMAL] = "#ffffff" #color of the label-text
+  base[NORMAL] = "#c6c7b4" #color of the label
+  NautilusIconContainer::normal_alpha = 0 #sets the alpha of the labels (0-255)
+}					
+widget_class "*DesktopIcon*" style "desktop-icon"

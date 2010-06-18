@@ -24,21 +24,21 @@
 
 
 
-/*--- a moi---*/
-/*
-Thunar ce lance sur le bureau 1*/
+#--- a moi---
+
+#Thunar ce lance sur le bureau 1
 Property = "thunar,Thunar" {
 	ApplyOn ="Start New"
 	Workspace = "1"
 }
 
-/*Firefox ce lance sur le bureau 2*/
+#Firefox ce lance sur le bureau 2
 Property = "Navigator,Namoroka" {
 	ApplyOn ="Start New"
 	Workspace = "2"
 }
 
-/*Terminal ce lance sur le bureau 3*/
+#Terminal ce lance sur le bureau 3
 #Property = "urxvt,URxvt" {
 #	ApplyOn ="Start New"
 #	Titlebar = "False"
@@ -46,7 +46,7 @@ Property = "Navigator,Namoroka" {
 #	Workspace = "3"
 #}
 
-/*Pidgin ce lance sur le bureau 4*/
+#Pidgin ce lance sur le bureau 4
 Property = "pidgin,Pidgin" {
 	ApplyOn ="Start New"
 	Workspace = "4"

@@ -9,7 +9,7 @@ own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 draw_borders no
 draw_shades no
 
-gap_x 17
+gap_x 22
 gap_y 16
 alignment bottom_right
 
@@ -32,4 +32,4 @@ maximum_width 0
 override_utf8_locale yes
 
 TEXT
-Cpu: ${color e0e0e0}${execi 300 sensors | grep -A 0 'temp1' | cut -c15-16}°C${color} Pacup: ${color e0e0e0}${execi 3 pacman -Qu | wc -l} Cpu: ${color e0e0e0}${cpu}%${color} Ram: ${color e0e0e0}${memperc}%${color} Date: ${color e0e0e0}${time %d/%m/%y}${color} Time: ${color e0e0e0}${time %H:%M}${color}
+Cpu: ${color 804ea0}${execi 300 sensors | grep -A 0 'temp1' | cut -c15-16}°C${color} Pacup: ${color 804ea0}${execi 30 pacman -Qu | wc -l} Cpu: ${color 804ea0}${cpu}%${color} Ram: ${color 804ea0}${memperc}%${color} Date: ${color 804ea0}${time %d/%m/%y}${color} Time: ${color 804ea0}${time %H:%M}${color}

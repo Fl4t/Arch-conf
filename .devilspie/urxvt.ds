@@ -3,7 +3,6 @@
 (matches (window_class) "URxvt")
 (begin
     (wintype "dock")
-	(undecorate)
 	(spawn_async (str "transset-df -i " (window_xid) " .90"))
 )
 )

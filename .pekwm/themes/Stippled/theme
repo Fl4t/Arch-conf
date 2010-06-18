@@ -1,0 +1,213 @@
+/*
+
+"Stippled" theme for PekWM 0.1.11, by Pnevma (Query.V@gmail.com).
+Last Modified: 22/07/09 06:29:45.
+
+*/
+
+$FONT = "nu:size=10#XFT"
+
+Require {
+	Templates = "True"
+}
+
+Define = "BaseDecor" {
+	Height = "0"
+	Pad = "0 0 0 0"
+	Focused = "Empty"
+	Unfocused = "Empty"
+	Tab {
+		Focused = "Empty"
+		FocusedSelected = "Empty"
+		Unfocused = "Empty"
+		UnfocusedSelected = "Empty"
+	}
+	Separator {
+		Focused = "Empty"
+		Unfocused = "Empty"
+	}
+	Font {
+		Focused = "$FONT"
+	}
+	FontColor {
+		Focused = "Empty"
+		FocusedSelected = "Empty"
+		Unfocused = "Empty"
+		UnfocusedSelected = "Empty"
+	}
+	Buttons {
+		Right = "Close" {
+			Focused = "Empty"
+			Unfocused = "Empty"
+			Pressed = "Empty"
+			Hover = "Empty"
+			Button = "1" { Actions = "Close" }
+			Button = "3" { Actions = "Kill" }
+		}
+		Right = "Maximize" {
+			Focused = "Empty"
+			Unfocused = "Empty"
+			Pressed = "Empty"
+			Hover = "Empty"
+			Button = "1" { Actions = "Toggle Maximized" }
+		}
+		Right = "Iconify" {
+			Focused = "Empty"
+			Unfocused = "Empty"
+			Pressed = "Empty"
+			Hover = "Empty"
+			Button = "1" { Actions = "Set Iconified" }
+		}
+		Left = "Shade" {
+			Focused = "Empty"
+			Unfocused = "Empty"
+			Pressed = "Empty"
+			Hover = "Empty"
+			Button = "1" { Actions = "Toggle Shaded" }
+		}
+	}
+}
+
+Define = "LineBorder" {
+	Border {
+		Focused {
+			TopLeft = "Solid #000000 2x2"
+			Top = "Solid #000000 2x2"
+			TopRight = "Solid #000000 2x2"
+			Left = "Solid #000000 2x2"
+			Right = "Solid #000000 2x2"
+			BottomLeft = "Solid #000000 2x2"
+			Bottom = "Solid #000000 2x2"
+			BottomRight = "Solid #000000 2x2"
+		}
+		Unfocused {
+			TopLeft = "Solid #666666 2x2"
+			Top = "Solid #666666 2x2"
+			TopRight = "Solid #666666 2x2"
+			Left = "Solid #666666 2x2"
+			Right = "Solid #666666 2x2"
+			BottomLeft = "Solid #666666 2x2"
+			Bottom = "Solid #666666 2x2"
+			BottomRight = "Solid #666666 2x2"
+		}
+	}
+}
+
+Define = "StippledBorder" {
+	Border {
+		Focused {
+			TopLeft = "Image top-left.png"
+			Top = "Image top-border.png"
+			TopRight = "Image top-right.png"
+			Left =  "Image left-border.png"
+			Right = "Image right-border.png"
+			BottomLeft = "Image bottom-left.png"
+			Bottom = "Image bottom-border.png"
+			BottomRight = "Image bottom-right.png"
+		}
+		Unfocused {
+			TopLeft = "Image top-left.png"
+			Top = "Image top-border.png"
+			TopRight = "Image top-right.png"
+			Left =  "Image left-border.png"
+			Right = "Image right-border.png"
+			BottomLeft = "Image bottom-left.png"
+			Bottom = "Image bottom-border.png"
+			BottomRight = "Image bottom-right.png"
+		}
+	}
+}
+
+PDecor {
+	Decor = "Default" {
+		Title {
+			@BaseDecor
+			@LineBorder
+		}
+	}
+	Decor = "Menu" {
+		Title {
+			@BaseDecor
+			@StippledBorder
+		}
+	}
+	Decor = "WorkspaceIndicator" {
+		Title {
+			@BaseDecor
+			@StippledBorder
+		}
+	}
+	Decor = "CmdDialog" {
+		Title {
+			@BaseDecor
+			@StippledBorder
+		}
+	}
+	Decor = "StatusWindow" {
+		Title {
+			@BaseDecor
+			@StippledBorder
+		}
+	}
+	Decor = "Terminal" {
+		Title {
+			@BaseDecor
+			@StippledBorder
+		}
+	}
+}
+
+Menu {
+	Pad = "3 2 7 8"
+	Focused {
+		Font = "$FONT"
+		Background = "Solid #292929"
+		Item = "Empty"
+		Text = "#868179"
+		Separator = "Image menuline.png"
+		Arrow = "Solid #363636 2x2"
+	}
+	Unfocused {
+		Font = "$FONT"
+		Background = "Solid #292929"
+		Item = "Empty"
+		Text = "#424242"
+		Separator = "Image menuline.png"
+		Arrow = "Solid #363636 2x2"
+	}
+	Selected {
+		Font = "$FONT"
+		Background = "Solid #363636"
+		Item = "Empty"
+		Text = "#F2F2F2"
+		Arrow = "Solid #424242 3x3"
+	}
+}
+
+Harbour {
+	Texture = "Solid #292929""
+}
+
+CmdDialog {
+	Font = "$FONT"
+	Texture = "Solid #292929"
+	Text = "#868179"
+	Pad = "5 5 2 5"
+}
+
+Status {
+	Font = "$FONT"
+	Texture = "Solid #292929"
+	Text = "#868179"
+	Pad = "0 1 4 4"
+}
+
+WorkspaceIndicator {
+	Font = "$FONT"
+	Background = "Solid #292929"
+	Workspace = "Solid #363636"
+	WorkspaceActive = "Solid #424242"
+	Text = "#868179"
+	EdgePadding = "5"
+	WorkspacePadding = "2"
+}

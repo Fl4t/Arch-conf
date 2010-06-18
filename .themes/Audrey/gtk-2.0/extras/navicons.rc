@@ -1,0 +1,11 @@
+pixmap_path "/usr/share/themes/Murrina-Innocent-gtk-2.0/extras"
+
+style "default"
+{
+  stock["gtk-go-back"] ={{ "back.png" }}
+  stock["gtk-go-forward"] ={{ "forward.png" }}
+  stock["gtk-go-up"] ={{ "up.png" }}
+  stock["gtk-refresh"] =   {{ "refresh.png" }}
+  stock["gtk-home"] ={{ "home.png" }}
+  stock["gtk-stop"] ={{ "stop.png" }}
+}

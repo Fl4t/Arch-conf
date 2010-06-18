@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/fl4t/.pekwm/themes/Dyne-ASN'
 let g:netrw_dirhist_2='/home/fl4t/.config/tint2'
+let g:netrw_dirhist_3='/home/fl4t/.pekwm/themes/gorgeous'
+let g:netrw_dirhist_4='/home/fl4t/.pekwm/themes'
+let g:netrw_dirhist_5='/home/fl4t/.pekwm/themes/gorgeous'

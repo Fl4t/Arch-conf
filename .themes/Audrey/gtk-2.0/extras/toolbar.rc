@@ -1,0 +1,13 @@
+style "toolbar"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function = BOX
+      file = "toolbar.png"
+      border = { 4, 4, 4, 4}
+      stretch = TRUE
+    }
+  }
+}

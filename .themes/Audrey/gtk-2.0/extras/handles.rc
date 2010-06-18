@@ -1,0 +1,23 @@
+style "handlebox"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function = HANDLE
+      recolorable = TRUE
+      overlay_file = "handle-v.png"
+      overlay_stretch = FALSE
+      orientation = VERTICAL
+    }
+    image
+    {
+      function = HANDLE
+      overlay_file = "handle-h.png"
+      overlay_stretch = FALSE
+      orientation = HORIZONTAL
+    }
+  }
+}
+widget "*PanelWidget*" style "handlebox"
+widget "*PanelApplet*" style "handlebox"

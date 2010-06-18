@@ -71,6 +71,7 @@ alias unmount='umount'
 alias pakman='pacman'
 alias ll="ls -alh"
 alias exit="clear; exit"
+alias q="exit"
 alias x="startx"
 alias pacsearch="pacman -Sl | cut -d' ' -f2 | grep "
 alias pacup="sudo pacman -Syu"

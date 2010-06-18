@@ -9,7 +9,7 @@ use File::Basename;
 
 ## What distro logo to use to use, Available "Archlinux Debian Ubuntu None" ##
 my $distro = "Archlinux";
-my $myArchVersion = "ArchLinux (X owned ATI)";
+my $myArchVersion = "ArchLinux 64";
 
 ## what values to display. Use "OS Kernel DE WM win_theme Theme Font Icons" ##
 my $display = "OS Kernel DE WM Win_theme Theme Icons Font Background";
@@ -17,10 +17,10 @@ my $display = "OS Kernel DE WM Win_theme Theme Icons Font Background";
 ## Takes a screen shot if set to 0 ##
 my $shot = 0;
 ## Command to run to take screen shot ##
-#my $command = "scrot -d 15";
+my $command = "scrot -cd 5 snap.png";
 
 ## What colors to use for the variables. ##
-my $textcolor = "\e[0m";
+my $textcolor = "\e[32m";
 
 ## Prints little debugging messages if set to 0 ##
 my $quite = 1;
@@ -345,8 +345,8 @@ if ( $display =~ "OS"){
   unshift(@line, "$version");
 }
 
-my $c1 = "\e[1;32m";
-my $c2 = "\e[1;32m";
+my $c1 = "\e[1;34m";
+my $c2 = "\e[1;34m";
 
 system("clear");
 
