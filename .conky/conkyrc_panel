@@ -32,4 +32,4 @@ maximum_width 0
 override_utf8_locale yes
 
 TEXT
-Cpu: ${color 804ea0}${execi 300 sensors | grep -A 0 'temp1' | cut -c15-16}°C${color} Pacup: ${color 804ea0}${execi 30 pacman -Qu | wc -l} Cpu: ${color 804ea0}${cpu}%${color} Ram: ${color 804ea0}${memperc}%${color} Date: ${color 804ea0}${time %d/%m/%y}${color} Time: ${color 804ea0}${time %H:%M}${color}
+Temp: ${color 804ea0}${execi 300 sensors | grep -A 0 'temp1' | cut -c15-16}°C${color} Pacup: ${color 804ea0}${execi 30 pacman -Qu | wc -l}${color} Cpu: ${color 804ea0}${cpu}%${color} Ram: ${color 804ea0}${memperc}%${color} Date: ${color 804ea0}${time %d/%m/%y}${color} Time: ${color 804ea0}${time %H:%M}${color}
