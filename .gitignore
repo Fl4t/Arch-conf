@@ -43,3 +43,4 @@ scripts/gmail.py
 .thumbnails/
 .viminfo
 documents/
+.config/geany/
