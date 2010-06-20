@@ -11,8 +11,8 @@ Files {
 MoveResize {
     EdgeAttract = "10"
     EdgeResist = "10"
-    WindowAttract = "5"
-    WindowResist = "5"
+    WindowAttract = "10"
+    WindowResist = "10"
     OpaqueMove = "True"
     OpaqueResize = "True"
 }
@@ -35,7 +35,7 @@ Screen {
     FullscreenDetect = "True"
     HonourRandr = "True"
     HonourAspectRatio = "True"
-    EdgeSize = "1 1 1 1"
+    EdgeSize = "30 30 30 30"
     EdgeIndent = "False"
     PixmapCacheSize = "20"
     DoubleClickTime = "350"

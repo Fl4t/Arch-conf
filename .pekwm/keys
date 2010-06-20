@@ -39,34 +39,27 @@ Global {
 	KeyPress = "Mod4 R" { Actions = "ShowMenu Root" }
 	KeyPress = "Mod4 W" { Actions = "ShowMenu Window" }
 	# External Commands
-	KeyPress = "Mod4 F1" { Actions = "Exec $TERM" }
+	KeyPress = "Mod4 F2" { Actions = "Exec $TERM" }
+	KeyPress = "Mod4 F3" { Actions = "Exec $NAV" }
+	KeyPress = "Mod4 F4" { Actions = "Exec $PIDGIN" }
 	# Pekwm control
 	KeyPress = "Ctrl Mod1 Delete" { Actions = "Reload" }
-	KeyPress = "Mod4 F2" { Actions = "ShowCmdDialog" }
+	KeyPress = "Mod4 F1" { Actions = "ShowCmdDialog" }
 	KeyPress = "Mod4 H" { Actions = "Toggle HarbourHidden" }
 
 # - - ----------------------------------------------- - -
 # CHAINS. These give you access to just about everything.
 	# Decor Toggles
-	Chain = "Ctrl Mod1 D" {
+	Chain = "Mod4 V" {
 		KeyPress = "B" { Actions = "Toggle DecorBorder" }
 		KeyPress = "T" { Actions = "Toggle DecorTitlebar" }
 		KeyPress = "D" { Actions = "Toggle DecorBorder; Toggle DecorTitlebar" }
 	}
 	# Window Actions
-	Chain = "Ctrl Mod1 A" {
-		Chain = "G" {
+	Chain = "Mod4 W" {
 			KeyPress = "G" { Actions = "MaxFill True True" }
 			KeyPress = "V" { Actions = "MaxFill False True" }
-			KeyPress = "H" { Actions = "MaxFill True False" }
-		}
-	}
-	# External commands
-	Chain = "Ctrl Mod1 E" {
-		KeyPress = "E" { Actions = "Exec $TERM" }
-		KeyPress = "L" { Actions = "Exec xlock -mode blank &" }
-		KeyPress = "S" { Actions = "Exec scrot &" }
-		KeyPress = "C" { Actions = "ShowCmdDialog" }
+			KeyPress = "F" { Actions = "MaxFill True False" }
 	}
 }
 
@@ -84,27 +77,14 @@ MoveResize {
 	Keypress = "Escape" { Actions = "Cancel" }
 	Keypress = "q" { Actions = "Cancel" }
 	Keypress = "Return" { Actions = "End" }	
-	
 	KeyPress = "" { Actions = "MoveToEdge TopLeft" }
 	KeyPress = "" { Actions = "MoveToEdge TopRight" }
 	KeyPress = "" { Actions = "MoveToEdge BottomLeft" }
 	KeyPress = "" { Actions = "MoveToEdge BottomRight" }
 	KeyPress = "" { Actions = "MoveToEdge TopCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge TopCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge TopEdge" }
-	KeyPress = "" { Actions = "MoveToEdge TopEdge" }
-	KeyPress = "" { Actions = "MoveToEdge TopRight" }
+	KeyPress = "" { Actions = "MoveToEdge BottomCenterEdge" }
 	KeyPress = "" { Actions = "MoveToEdge LeftCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge LeftEdge" }
 	KeyPress = "" { Actions = "MoveToEdge RightCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge RightCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge RightEdge" }
-	KeyPress = "" { Actions = "MoveToEdge RightEdge" }
-	KeyPress = "" { Actions = "MoveToEdge BottomCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge BottomCenterEdge" }
-	KeyPress = "" { Actions = "MoveToEdge BottomEdge" }
-	KeyPress = "" { Actions = "MoveToEdge BottomEdge" }
-	KeyPress = "" { Actions = "MoveToEdge BottomRight" }
 }
 
 # Keys for CmdDialog editing
