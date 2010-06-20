@@ -55,7 +55,7 @@ task_iconified_background_id = 0
 task_font = monaco 7
 task_font_color = #babdb6 100
 task_active_font_color = #babdb6 100
-task_urgent_font_color = #454545 100
+task_urgent_font_color = #804ea0 100
 task_iconified_font_color = #babdb6 30
 font_shadow = 0
 
