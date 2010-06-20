@@ -6,7 +6,7 @@
 # ...or the Window Manager of your choice
 
 numlockx
-setxkbmap -option terminate:ctrl_alt_bksp
+#setxkbmap -option terminate:ctrl_alt_bksp
 nitrogen --restore &
 
 #exec ck-launch-session start-compiz.sh 
