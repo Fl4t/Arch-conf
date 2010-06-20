@@ -1,3 +1,4 @@
+.weechat/logs/
 .config/xfce4/
 .htoprc
 scripts/gmail.py
