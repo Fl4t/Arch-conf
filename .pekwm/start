@@ -1,18 +1,10 @@
 #!/bin/sh
-
-#Pour dbus
-if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-eval `dbus-launch --sh-syntax --exit-with-session`
-fi
-#Pour OpenOffice
-export OOO_FORCE_DESKTOP=gnome &
-
 urxvtd -q -f -o
 nitrogen --restore &
 devilspie &
 tint2 &
 #xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
-(sleep 1s && exec ~/.conky/pekwm/conky_start_pekwm.sh) &
+(sleep 1s && exec ~/.conky/pekwm/conky_start_pekwm.sh) 
 #cairo-compmgr -n &
 #xcompmgr -c -C -r 2 -l 0 -t 0
 #urxvt &
