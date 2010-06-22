@@ -3,7 +3,6 @@ lxappearance
 thunar
 conky
 <tint2
-exit
 firefox
 killall urxvt
 urxvtd -c -f -o
@@ -13,3 +12,4 @@ killall conky
 killalll tint2
 killall tint2
 tint2
+exit

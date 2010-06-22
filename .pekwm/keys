@@ -40,7 +40,7 @@ Global {
 	# External Commands
 	KeyPress = "Mod4 F2" { Actions = "Exec $TERM" }
 	KeyPress = "Mod4 F3" { Actions = "Exec $NAV" }
-	KeyPress = "Mod4 F4" { Actions = "Exec $PIDGIN" }
+	KeyPress = "Mod4 F4" { Actions = "Exec $THUNAR" }
 	# Pekwm control
 	KeyPress = "Ctrl Mod1 Delete" { Actions = "Reload" }
 	KeyPress = "Mod4 F1" { Actions = "ShowCmdDialog" }
