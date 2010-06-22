@@ -6,7 +6,7 @@
 # ...or the Window Manager of your choice
 
 # disable CapsLock & map to Escape
-setxkbmap -option caps:escape &
+# setxkbmap -option caps:escape &
 
 # Kill X
 setxkbmap -option terminate:ctrl_alt_bksp
