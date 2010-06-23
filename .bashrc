@@ -18,7 +18,7 @@ PS1='\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;36m\]\h \[\033[01;33m\]\W \[\033
 complete -cf sudo
 
 #Now when you open a new shell window, you can simply type the name of your scripts.
-PATH=$PATH:/home/USERNAME/scripts
+PATH=$PATH:/home/fl4t/scripts
 
 #color grep
 export GREP_COLOR="1;33"
@@ -49,21 +49,11 @@ extract () {
    fi
  }
 
-#colorized pacman output with pacs alias:
-alias pacs="pacsearch"
-pacsearch() {
-   echo -e "$(pacman -Ss "$@" | sed \
-     -e 's#^core/.*#\\033[1;31m&\\033[0;37m#g' \
-     -e 's#^extra/.*#\\033[0;32m&\\033[0;37m#g' \
-     -e 's#^community/.*#\\033[1;35m&\\033[0;37m#g' \
-     -e 's#^.*/.* [0-9].*#\\033[0;36m&\\033[0;37m#g' ) \
-     \033[0m"
-}
-
 # ----------------------------------------------------------------------------
 #aliases
 # ----------------------------------------------------------------------------
 
+alias pacs="pacsearch"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -73,7 +63,7 @@ alias ll="ls -alh"
 alias exit="clear; exit"
 alias q="exit"
 alias x="startx"
-alias pacsearch="pacman -Sl | cut -d' ' -f2 | grep "
+alias pacs="pacman -Sl | cut -d' ' -f2 | grep"
 alias pacup="sudo pacman -Syu"
 alias pac="sudo pacman -S"
 alias pacrm="sudo pacman -Rs"
