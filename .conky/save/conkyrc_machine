@@ -1,0 +1,103 @@
+alignment tl
+background yes
+border_inner_margin 0
+border_width 0
+#default_color FFFFFF
+default_color 000000
+default_outline_color black
+default_shade_color black
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 10 # left-right
+gap_y 10 # up-down
+minimum_size 270 0
+no_buffers yes
+override_utf8_locale yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window yes
+pad_percents 2
+short_units yes
+stippled_borders 0
+top_name_width 5
+update_interval 1
+uppercase no
+use_spacer right
+#use_spacer none
+use_xft yes
+xftalpha 1.0 #0.2
+xftfont Sans Mono:size=7
+#xftalpha 0.8
+#xftfont Purisa:size=10
+ 
+TEXT
+${goto 15}${nodename}
+${goto 15}|
+${goto 12}+----Status
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- CPU${goto 125}${cpu cpu0}% - ${freq_g}GHz
+${goto 15}|${goto 38}+-- MEM${goto 125}${memmax} Total
+${goto 15}|${goto 60}+-- In Use${goto 125}${mem} (${memperc}%) 
+${goto 15}|${goto 38}+-- Swap${goto 125}${swapmax} Total
+${goto 15}|${goto 60}+-- Used${goto 125}${swap} - ${swapperc}%
+${goto 15}|${goto 38}+-- LoadAvg${goto 125}${loadavg}
+${goto 15}|${goto 38}+-- Diskio ${goto 125}${diskio}
+${goto 15}|${goto 60}+-- Read${goto 125}${diskio_read}
+${goto 15}|${goto 60}+-- Write${goto 125}${diskio_write}
+${goto 15}|${goto 38}+-- Battery 0 ${goto 125}${battery}
+${goto 15}|${goto 60}+-- Life${goto 125}${battery_time}
+${goto 15}|
+${goto 12}+----Storage
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- FS Usage${goto 125}${fs_used_perc /}% Used
+${goto 15}|${goto 60}+-- /${goto 125}${fs_free /} / ${fs_size /}
+${goto 15}|${goto 60}+-- /home${goto 125}${fs_free /home} / ${fs_size /home}
+${goto 15}|${goto 60}+-- /usr${goto 125}${fs_free /usr} / ${fs_size /usr}
+${goto 15}|
+${goto 12}+----Processes
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- Total${goto 125}${processes}
+${goto 15}|${goto 38}+-- Running${goto 125}${running_processes}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- CPU
+${goto 15}|${goto 40}|${goto 60}+-- ${top name 1}${goto 125}${top cpu 1}${top mem 1}
+${goto 15}|${goto 40}|${goto 60}+-- ${top name 2}${goto 125}${top cpu 2}${top mem 2}
+${goto 15}|${goto 40}|${goto 60}+-- ${top name 3}${goto 125}${top cpu 3}${top mem 3}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- MEM
+${goto 15}|${goto 60}+-- ${top_mem name 1}${goto 125}${top_mem cpu 1}${top_mem mem 1}
+${goto 15}|${goto 60}+-- ${top_mem name 2}${goto 125}${top_mem cpu 2}${top_mem mem 2}
+${goto 15}|${goto 60}+-- ${top_mem name 3}${goto 125}${top_mem cpu 3}${top_mem mem 3}
+${goto 15}|
+${goto 12}+----Net
+${if_mpd_playing}${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- eth0${goto 125}${addr eth0}
+${goto 15}|${goto 38}+-- wlan0${goto 125}${addr wlan0}
+${goto 15}|${goto 40}|${goto 60}+-- Quality${goto 125}${wireless_link_qual_perc wlan0}%
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- Up
+${goto 15}|${goto 40}|${goto 60}+-- Speed${goto 125}${upspeedf eth0}KiB
+${goto 15}|${goto 40}|${goto 60}+-- Total${goto 125}${totalup eth0}KiB
+${goto 15}|${goto 38}+-- Down
+${goto 15}|${goto 60}+-- Speed${goto 125}${downspeedf eth0}KiB
+${goto 15}|${goto 60}+-- Total${goto 125}${totaldown eth0}KiB
+${goto 15}|
+${goto 12}+----mpd
+${goto 40}|
+${goto 38}+--${mpd_artist} - ${mpd_title 15}
+${goto 38}+--$mpd_elapsed/$mpd_length
+${goto 38}+--$mpd_status ${mpd_bar 6,80}
+${else}${goto 40}|
+${goto 38}+-- eth0${goto 125}${addr eth0}
+${goto 38}+-- wlan0${goto 125}${addr wlan0}
+${goto 40}|
+${goto 38}+-- Up
+${goto 40}|${goto 60}+-- Speed${goto 125}${upspeedf eth0}KiB
+${goto 40}|${goto 60}+-- Total${goto 125}${totalup eth0}KiB
+${goto 38}+-- Down
+${goto 60}+-- Speed${goto 125}${downspeedf eth0}KiB
+${goto 60}+-- Total${goto 125}${totaldown eth0}KiB
+${endif}
