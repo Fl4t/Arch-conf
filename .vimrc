@@ -83,14 +83,6 @@ set selection=inclusive
 " sauvegarde auto quand certaine commande
 set autowrite
 
-" Curseur & Co.
-function! s:Cursor0ldPosition() "Ouverture des fichiers avec le curseur à la position de la dernière édition
-	if line("'\"") > 0 && line("'\"") <= line("$")
-		exe "normal g`\""
-	endif
-endfunction
-autocmd BufReadPost * silent! call s:CursorOldPosition()
-
 " Ligne de commande
 set cmdheight=1 " command line height
 set showcmd "voir le mode commande

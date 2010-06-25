@@ -44,7 +44,6 @@ Global {
 	# Pekwm control
 	KeyPress = "Ctrl Mod1 Delete" { Actions = "Reload" }
 	KeyPress = "Mod4 F1" { Actions = "ShowCmdDialog" }
-	KeyPress = "Mod4 H" { Actions = "Toggle HarbourHidden" }
 
 # - - ----------------------------------------------- - -
 # CHAINS. These give you access to just about everything.
@@ -64,27 +63,18 @@ Global {
 
 # Keys when MoveResize is active
 MoveResize {
-	KeyPress = "Left" { Actions = "MoveHorizontal -10" }
-	KeyPress = "Right" { Actions = "MoveHorizontal 10" }
-	KeyPress = "Up" { Actions = "MoveVertical -10" }
-	KeyPress = "Down" { Actions = "MoveVertical 10" }
-	Keypress = "Mod4 Left" { Actions = "ResizeHorizontal -10" }
-	Keypress = "Mod4 Right" { Actions = "ResizeHorizontal 10" }
-	Keypress = "Mod4 Up" { Actions = "ResizeVertical -10" }
-	Keypress = "Mod4 Down" { Actions = "ResizeVertical 10" }
+	KeyPress = "Left" { Actions = "MoveHorizontal -30" }
+	KeyPress = "Right" { Actions = "MoveHorizontal 30" }
+	KeyPress = "Up" { Actions = "MoveVertical -30" }
+	KeyPress = "Down" { Actions = "MoveVertical 30" }
+	Keypress = "Mod4 Left" { Actions = "ResizeHorizontal -30" }
+	Keypress = "Mod4 Right" { Actions = "ResizeHorizontal 30" }
+	Keypress = "Mod4 Up" { Actions = "ResizeVertical -30" }
+	Keypress = "Mod4 Down" { Actions = "ResizeVertical 30" }
 	Keypress = "s" { Actions = "MoveSnap" }
 	Keypress = "Escape" { Actions = "Cancel" }
 	Keypress = "q" { Actions = "Cancel" }
 	Keypress = "Return" { Actions = "End" }	
-	KeyPress = "KP_7" { Actions = "MoveToEdge TopLeft" }
-	KeyPress = "KP_9" { Actions = "MoveToEdge TopRight" }
-	KeyPress = "KP_1" { Actions = "MoveToEdge BottomLeft" }
-	KeyPress = "KP_3" { Actions = "MoveToEdge BottomRight" }
-	KeyPress = "KP_5" { Actions = "MoveToEdge Center" }
-	KeyPress = "KP_8" { Actions = "MoveToEdge TopCenterEdge" }
-	KeyPress = "KP_2" { Actions = "MoveToEdge BottomCenterEdge" }
-	KeyPress = "KP_4" { Actions = "MoveToEdge LeftCenterEdge" }
-	KeyPress = "KP_6" { Actions = "MoveToEdge RightCenterEdge" }
 }
 
 # Keys for CmdDialog editing
