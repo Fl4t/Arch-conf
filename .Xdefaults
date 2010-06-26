@@ -21,10 +21,10 @@ Xcursor.size:  16
 
 !URxvt settings --------------------------------------------------------------
 
-URxvt*font: xft:profont:style=Regular:pixelsize=12
-URxvt*boldFont: xft:profont:style=Bold:pixelsize=12
-URxvt*italicFont: xft:profont:style=Italic:pixelsize=12
-URxvt*boldItalicFont: xft:profont=boldItalic:pixelsize=12
+URxvt*font: xft:terminus:style=Regular:pixelsize=11
+URxvt*boldFont: xft:terminus:style=Bold:pixelsize=11
+URxvt*italicFont: xft:terminus:style=Italic:pixelsize=11
+URxvt*boldItalicFont: xft:terminus=boldItalic:pixelsize=11
 URxvt*saveLines: 32767
 !Urxvt*borderless: true
 URxvt*scrollBar: false
@@ -54,11 +54,12 @@ URxvt*geometry: 95x41
 !#include "/home/fl4t/.colorsheme/thayer"
 !#include "/home/fl4t/.colorsheme/trapd00r"
 !#include "/home/fl4t/.colorsheme/dwmrob"
-!#include "/home/fl4t/.colorsheme/derp"
+#include "/home/fl4t/.colorsheme/derp"
 !#include "/home/fl4t/.colorsheme/digerati"
 !#include "/home/fl4t/.colorsheme/gnometerm"
 !#include "/home/fl4t/.colorsheme/jasonwryan"
 !#include "/home/fl4t/.colorsheme/rezza"
 !#include "/home/fl4t/.colorsheme/rydgel"
 !#include "/home/fl4t/.colorsheme/tango"
-#include "/home/fl4t/.colorsheme/zenburn"
+!#include "/home/fl4t/.colorsheme/zenburn"
+!#include "/home/fl4t/.colorsheme/tam"
