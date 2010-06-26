@@ -24,6 +24,7 @@
 # ------------------------------------------------------------------------------
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
+
 #256 color with urxvt
 terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
@@ -157,6 +158,7 @@ termcapinfo vt100 dl=5\E[M
 hardstatus on
 # Set the hardstatus prop on gui terms to set the titlebar/icon title
 termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+
 # use this for the hard status string
 #hardstatus string "%h%? users: %u%?"
 
