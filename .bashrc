@@ -4,6 +4,9 @@
 # modified: June 2010
 # ----------------------------------------------------------------------------
 
+# Check for an interactive session
+[[ -z "$PS1" ]] && return
+
 #default editor
 export EDITOR="vim"
 
@@ -48,6 +51,26 @@ extract () {
        echo "'$1' is not a valid file!"
    fi
  }
+
+# history options
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd*"
+export HISTFILESIZE=2000
+export HISTCONTROL="ignoreboth"
+export HISTSIZE=500
+
+# more for less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+# disable side-effect of less color
+function env() {
+  exec /usr/bin/env "$@" | grep -v ^LESS_TERMCAP_
+}
 
 # ----------------------------------------------------------------------------
 #aliases
