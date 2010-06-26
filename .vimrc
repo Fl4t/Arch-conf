@@ -75,7 +75,7 @@ set ttyfast
 set modeline
 
 " Pas de retour à la ligne sur le bord
-" set nowrap
+set nowrap
 
 " comportement de la selection
 set selection=inclusive
@@ -96,6 +96,9 @@ fun! <SID>SetStatusLine() " Set up the status line
     execute "set statusline=" . l:s1 . l:s2 . l:s3
 endfun
 call <SID>SetStatusLine()
+
+" theme vim
+" colorscheme miromiro
 
 " ----------------------------------------------------------------------------
 " Utilities
