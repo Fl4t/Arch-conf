@@ -1,17 +1,30 @@
 # ----------------------------------------------------------------------------
 # file:     ~/.bashrc
-# author:   Fl4t
-# modified: June 2010
+# author:   fl4t
+# modified: July 2010
 # ----------------------------------------------------------------------------
 
 # Check for an interactive session
-[[ -z "$PS1" ]] && return
+if [ -z "$PS1" ]; then
+	return
+fi
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+#default host
+if [ -z "$HOST" ] ; then
+	export HOST=${HOSTNAME}
+fi
+
+#default term
+export TERM="rxvt-unicode"
 
 #default editor
 export EDITOR="vim"
 
 #colorized ls
-alias ls='ls --color=auto'
 eval `dircolors -b`
 
 #PS1 personalised
@@ -30,7 +43,7 @@ alias grep='grep --color=auto'
 #faster completion
 set show-all-if-ambiguous on
 
-#extract utility
+# {{{ extract utility
 extract () {
    if [ -f $1 ] ; then
        case $1 in
@@ -51,6 +64,7 @@ extract () {
        echo "'$1' is not a valid file!"
    fi
  }
+# }}}
 
 # history options
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd*"
@@ -71,25 +85,3 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 function env() {
   exec /usr/bin/env "$@" | grep -v ^LESS_TERMCAP_
 }
-
-# ----------------------------------------------------------------------------
-#aliases
-# ----------------------------------------------------------------------------
-
-source ~/.sshrc
-alias pacs="pacsearch"
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias unmount='umount'
-alias pakman='pacman'
-alias ll="ls -alh"
-alias exit="clear; exit"
-alias q="exit"
-alias x="startx"
-alias pacs="pacman -Sl | cut -d' ' -f2 | grep"
-alias pacup="sudo pacman -Syu"
-alias pac="sudo pacman -S"
-alias pacrm="sudo pacman -Rs"
-alias reboot="sudo reboot"
-alias halt="sudo halt"
