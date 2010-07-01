@@ -17,8 +17,7 @@ alias gs='git status'
 alias ga='git add'
 
 # Vim aliases
-alias v='vim'
-alias vp='vimpager'
+alias v='sudo vim'
 alias sv='sudo vim'
 alias xorg='sudo vim /etc/X11/xorg.conf'
 alias rc='sudo vim /etc/rc.conf'
