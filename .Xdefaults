@@ -28,6 +28,8 @@ URxvt*boldItalicFont: xft:terminus=boldItalic:pixelsize=11
 URxvt*saveLines: 32767
 !Urxvt*borderless: true
 URxvt*scrollBar: false
+URxvt*colorUL: #00ff5f
+URxvt*pointerBlank: true
 URxvt*loginShell: false
 URxvt*secondaryScroll: true
 URxvt*perl-lib: /usr/lib/urxvt/perl/
@@ -36,7 +38,7 @@ URxvt*urlLauncher: /usr/bin/firefox
 URxvt*matcher.button: 1
 URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 URxvt*visualBell: false
-URxvt*urgentOnBell: false
+URxvt*urgentOnBell: true
 URxvt*keysym.C-u: perl:matcher
 URxvt*cutchars: `”()'*<>[]{|}
 URxvt*skipBuiltinGlyphs: true
@@ -54,7 +56,7 @@ URxvt*geometry: 95x41
 !#include "/home/fl4t/.colorsheme/thayer"
 !#include "/home/fl4t/.colorsheme/trapd00r"
 !#include "/home/fl4t/.colorsheme/dwmrob"
-#include "/home/fl4t/.colorsheme/derp"
+!#include "/home/fl4t/.colorsheme/derp"
 !#include "/home/fl4t/.colorsheme/digerati"
 !#include "/home/fl4t/.colorsheme/gnometerm"
 !#include "/home/fl4t/.colorsheme/jasonwryan"
@@ -62,4 +64,8 @@ URxvt*geometry: 95x41
 !#include "/home/fl4t/.colorsheme/rydgel"
 !#include "/home/fl4t/.colorsheme/tango"
 !#include "/home/fl4t/.colorsheme/zenburn"
-!#include "/home/fl4t/.colorsheme/tam"
+#include "/home/fl4t/.colorsheme/tam"
+!#include "/home/fl4t/.colorsheme/evanlec"
+!#include "/home/fl4t/.colorsheme/gnometerm"
+!#include "/home/fl4t/.colorsheme/miro"
+!#include "/home/fl4t/.colorsheme/sicpsnake"
