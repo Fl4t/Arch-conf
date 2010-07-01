@@ -13,7 +13,7 @@ Rootmenu = "" 	{
 		Entry = "Gvim" { Actions = "Exec gvim &" }
 		} 
 	Submenu = "Style" 	{
-		Entry = "Lxapps" { Actions = "Exec lxappearance &" }
+		Entry = "Lxapp" { Actions = "Exec lxappearance &" }
 		Entry = "Nitrogen" { Actions = "Exec nitrogen ~/documents/wallpaper/ &" }
 		}
 	Submenu = "PekWM" {

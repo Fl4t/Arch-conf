@@ -14,11 +14,11 @@ set textwidth=0 " pas de limite de largeur du texte
 " Indentation & Co.
 set autoindent " auto indents next new line
 set cindent " intelligent indenting
-set cinoptions=g0,:0,l1,(0,t0 "option pour cident
-set expandtab " pour remplacer les tabulations par des espaces
-set shiftwidth=4 " nombre de  caractère utilisé pour l'identation
-set tabstop=4 " nombre d'éspace par tab
-set softtabstop=4
+set cinoptions=g0,:0,l1,(0,t0 "option pour cindent
+set expandtab " pour remplacer les espaces par des tabulations
+set shiftwidth=3 " nombre de  caractère utilisé pour l'identation
+set tabstop=3 " nombre d'éspace par tab
+set softtabstop=3
 set smarttab
 set noet
 set wildchar=<tab>

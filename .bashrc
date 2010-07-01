@@ -15,13 +15,13 @@ alias ls='ls --color=auto'
 eval `dircolors -b`
 
 #PS1 personalised
-PS1='\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;36m\]\h \[\033[01;33m\]\W \[\033[1;30m\]>\[\033[0;32m\]>\[\033[1;32m\]>\[\033[m\] \[\033[00m\]'
+PS1='\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;34m\]\h \[\033[01;33m\]\W \[\033[1;30m\]>\[\033[0;32m\]>\[\033[1;32m\]>\[\033[m\] \[\033[00m\]'
 
 #indent on sudo
 complete -cf sudo
 
 #Now when you open a new shell window, you can simply type the name of your scripts.
-PATH=$PATH:/home/fl4t/scripts
+PATH=$PATH:~/scripts
 
 #color grep
 export GREP_COLOR="1;33"
@@ -76,6 +76,7 @@ function env() {
 #aliases
 # ----------------------------------------------------------------------------
 
+source ~/.sshrc
 alias pacs="pacsearch"
 alias rm='rm -i'
 alias cp='cp -i'

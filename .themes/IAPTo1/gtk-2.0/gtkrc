@@ -44,23 +44,23 @@ style "default"
   fg[SELECTED]     	 = "#1e1e1e"
   fg[INSENSITIVE]  	 = "#333333"
 
-  bg[NORMAL]       	 = "#191919" # Normal Background
-  bg[ACTIVE]       	 = "#191919"
+  bg[NORMAL]       	 = "#252525" # Normal Background
+  bg[ACTIVE]       	 = "#252525"
   bg[PRELIGHT]     	 = "#1e1e1e" # Expand prelight bg
   bg[SELECTED]     	 = "#1e1e1e"
   bg[INSENSITIVE]  	 = "#1e1e1e"
 
-  base[NORMAL]     	 = "#191919" # Background, most
+  base[NORMAL]     	 = "#252525" # Background, most
   base[ACTIVE]     	 = "#1e1e1e" # Menu active item in inactive window
-  base[PRELIGHT]   	 = "#804ea0"
-  base[INSENSITIVE] = "#191919" # Inactive Entry bg
+  base[PRELIGHT]   	 = "#A9DB67"
+  base[INSENSITIVE] = "#252525" # Inactive Entry bg
   base[SELECTED]     = "#1e1e1e" # Menu active item in active window
 
   text[NORMAL]	 = "#c3c3c3" # Text in window, arrows
   text[INSENSITIVE]	 = "#333333" # Insensitive arrows
-  text[SELECTED]   	 = "#804ea0" # Active text in active window
-  text[ACTIVE]     	 = "#804ea0" # Active text in inactive window
-  text[PRELIGHT]   	 = "#804ea0" # Text on Mouseover
+  text[SELECTED]   	 = "#A9DB67" # Active text in active window
+  text[ACTIVE]     	 = "#A9DB67" # Active text in inactive window
+  text[PRELIGHT]   	 = "#A9DB67" # Text on Mouseover
 
 
 
@@ -264,7 +264,7 @@ style "inactivetext2"
 {
 
 
-  fg[PRELIGHT] 		= "#804ea0"
+  fg[PRELIGHT] 		= "#A9DB67"
   fg[NORMAL]    ="#c3c3c3"
   
 engine "mist"
@@ -1072,7 +1072,7 @@ style "scrollbar" = "default"
 
 style "progressbar" {
   
-  fg[PRELIGHT]       		= "#804ea0"
+  fg[PRELIGHT]       		= "#A9DB67"
   
   xthickness            		= 0
   ythickness            		= 0
@@ -1292,12 +1292,12 @@ widget_class "*Tool*GtkButton" style "toolbuttons"
 
 style "menubar" = "default"
 {
-  bg[NORMAL] = "#191919"
-  fg[NORMAL] = "#191919"
-  fg[PRELIGHT] = "#804ea0"
-  text[PRELIGHT] = "#804ea0"
-  fg[SELECTED]      = "#804ea0"
-  text[SELECTED]      = "#804ea0"
+  bg[NORMAL] = "#252525"
+  fg[NORMAL] = "#252525"
+  fg[PRELIGHT] = "#A9DB67"
+  text[PRELIGHT] = "#A9DB67"
+  fg[SELECTED]      = "#A9DB67"
+  text[SELECTED]      = "#A9DB67"
 
 xthickness            = 0
 ythickness            = 0
@@ -1330,7 +1330,7 @@ ythickness			= 0
 style "menuitem"	= "default"
 {
   xthickness				= 0
-  fg[PRELIGHT] 		= "#804ea0"  
+  fg[PRELIGHT] 		= "#A9DB67"  
    
    engine "pixmap"
   {
@@ -1540,7 +1540,7 @@ style "notebook"		= "default"
 
 style "tooltips"	= "default"
 {
-  bg[NORMAL]		= "#191919"
+  bg[NORMAL]		= "#252525"
 }
 
 ##################### RULER ##################

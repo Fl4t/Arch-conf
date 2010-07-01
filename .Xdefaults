@@ -45,7 +45,7 @@ URxvt*geometry: 95x41
 
 ! terminal colors ------------------------------------------------------------
 
-*background: #181818
+*background: #252525
 *foreground: #babdb6
 
 !#include "/home/fl4t/.colorsheme/flashy"
