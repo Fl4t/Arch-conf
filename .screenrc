@@ -25,6 +25,14 @@
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
 
+#Begin screen 1
+#bind 0 select 10                                                            
+#screen 1
+#select 11
+
+#remap ^A -> ^J
+#escape ^Jj
+
 #256 color with urxvt
 terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
@@ -40,7 +48,7 @@ deflogin on
 autodetach on
 
 # turn visual bell on
-vbell on
+vbell off 
 vbell_msg "   Wuff  ----  Wuff!!  "
 
 # define a bigger scrollback, default is 100 lines
@@ -198,10 +206,9 @@ termcapinfo xterm*|linux*|rxvt*|Eterm* ti@:te@
 #   in the next window, and then open mutt and tail in windows 8 and 9
 #   respectively.
 #
-#screen top
-#screen -t monkey ssh monkey
-#screen -t mail 8 mutt
-#screen -t daemon 9 tail -f /var/log/daemon.log
+screen -t weechat weechat-curses
+screen -t top htop
+screen -t bash
 
 sorendition =s WB 
 msgwait 3
