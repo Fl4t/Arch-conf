@@ -1,0 +1,84 @@
+# ----------------------------------------------------------------------------
+# file:     ~/.aliasrc
+# author:   fl4t
+# modified: July 2010
+# ----------------------------------------------------------------------------
+
+# Git Aliases
+alias gch='git chekout'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch --color'
+alias gba='git branch -a'
+alias gl='git log -p --color'
+alias gs='git status'
+alias ga='git add'
+
+# Vim aliases
+alias v='vim'
+alias vp='vimpager'
+alias sv='sudo vim'
+alias xorg='sudo vim /etc/X11/xorg.conf'
+alias rc='sudo vim /etc/rc.conf'
+alias xdef='vim ~/.Xdefaults'
+alias vimrc='vim ~/.vimrc'
+alias screenrc='vim ~/.screenrc'
+alias bashrc='vim ~/.bashrc'
+alias wmfsrc='vim ~/.config/wmfs/wmfsrc'
+alias fonts='vim ~/.fonts.conf'
+alias xinit='vim ~/.xinitrc'
+alias aliasrc='vim ~/.aliasrc'
+alias fstab='sudo vim /etc/fstab'
+
+# Sudo Commands
+alias s='sudo'
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown -hP now'
+alias halt='sudo halt'
+alias mount='sudo mount'
+alias umount='sudo umount'
+
+# Net Config Alias
+alias ifconfig='sudo ifconfig'
+alias iwconfig='sudo iwconfig'
+alias ping='sudo ping'
+
+# shell shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias l='ls --group-directories-first'
+alias ll='ls -lFh'
+alias la='ls -a --group-directories-first'
+alias lal='ls -ltha --group-directories-first'
+alias lt='ls -lht --group-directories-first' # List sorted by modification time
+alias ls='ls --color=auto --group-directories-first'
+alias lsd='ls -ld .*' # List only dot files
+alias cp='cp -rpv'
+alias e='exit'
+alias rm='rm -iv'
+alias rmf='rm -rfiv'
+alias cp='cp -riv'
+alias mv='mv -iv'
+alias unmount='umount'
+alias q='exit'
+alias x='startx'
+alias exit='clear; exit'
+alias c='clear'
+
+# Pacman aliases
+alias mirror='sudo vim /etc/pacman.d/mirrorlist'
+alias pac='sudo pacman -S'
+alias pacrm='sudo pacman -Rs'
+alias pacman='sudo pacman'
+alias pacup='sudo pacman -Syu'
+
+# Misc
+alias locate='locate -i'
+alias updatefonts='sudo fc-cache -vf'
+alias xprop='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
+#blank the monitors
+alias blank='xset dpms force standby'
