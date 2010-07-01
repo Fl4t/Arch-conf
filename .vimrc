@@ -5,30 +5,42 @@
 " ----------------------------------------------------------------------------
 
 " Surtout rien d'ennuyeux
-set shortmess=a
+autocmd winleave * setl nocursorline
+autocmd winenter * setl cursorline
 set noerrorbells " pas de clignotement quand erreur
 set visualbell t_vb=
 set guicursor=a:blinkon0 " pas de clignotement quand erreur
 set textwidth=0 " pas de limite de largeur du texte
+set shortmess=atI " shorten message prompts a bit
+set mousehide "hide mouse when typing
 
 " Indentation & Co.
-set autoindent " auto indents next new line
-set cindent " intelligent indenting
-set cinoptions=g0,:0,l1,(0,t0 "option pour cindent
+" set autoindent " auto indents next new line
+" set cindent " intelligent indenting
+" set cinoptions=g0,:0,l1,(0,t0 "option pour cindent
 set expandtab " pour remplacer les espaces par des tabulations
-set shiftwidth=3 " nombre de  caractère utilisé pour l'identation
-set tabstop=3 " nombre d'éspace par tab
-set softtabstop=3
+set shiftwidth=4 " nombre de  caractère utilisé pour l'identation
+set tabstop=8 " nombre d'éspace par tab
+set softtabstop=4
 set smarttab
 set noet
 set wildchar=<tab>
 set wildmode=longest:full,full
+set backspace=indent,eol,start
+filetype on
+filetype plugin on
+filetype indent on
+set copyindent
 
-" use Vim defaults
+" Vim defaults
 set nocompatible
 
 " Encodage par defaut
 set encoding=utf-8
+
+"store .swp files in central location
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " enable syntax highlighting
 syntax on
@@ -47,7 +59,6 @@ set hlsearch " highlight all search results
 set incsearch " increment search
 set ignorecase " case-insensitive search
 set smartcase " upper-case sensitive search
-set backspace=indent,eol,start
 
 " 500 lines of command line history
 set history=500
@@ -60,6 +71,7 @@ set nobackup " disable backup files (filename~)
 
 " Superbe menu de complétion \o/
 set wildmenu
+set wildmode=list:longest,full
 set wildignore=*.o,*~,*.cmo,*.cmi,*.a,*.cmx,*.cmxa
 
 " affiche les paires de parenthèses (),{},[]
@@ -70,9 +82,16 @@ set whichwrap=<,>,[,]
 
 " affichage rapide
 set ttyfast
+set ttyscroll=1
+let loaded_matchparen = 1
 
 " ligne de mode
 set modeline
+
+" espacement dans le scrolling haut/bas
+set scrolloff=10
+set sidescrolloff=10
+set sidescroll=1
 
 " Pas de retour à la ligne sur le bord
 set nowrap
@@ -97,12 +116,21 @@ fun! <SID>SetStatusLine() " Set up the status line
 endfun
 call <SID>SetStatusLine()
 
-" theme vim
-" colorscheme miromiro
-
 " ----------------------------------------------------------------------------
 " Utilities
 " ----------------------------------------------------------------------------
+
+"jump to last cursor position when opening a file
+"dont do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+    if &filetype !~ 'commit\c'
+        if line("'\"") > 0 && line("'\"") <= line("$")
+            exe "normal! g`\""
+            normal! zz
+        endif
+    end
+endfunction
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
