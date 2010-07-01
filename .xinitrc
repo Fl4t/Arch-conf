@@ -17,16 +17,20 @@ numlockx
 # Wallpaper
 nitrogen --restore &
 
-#exec ck-launch-session start-compiz.sh 
-exec ck-launch-session pekwm
+#URxvt daemon
+urxvtd -q -f -o
+
+# Pour COMPIZ
+#exec ck-launch-session start-compiz.sh
+
+# Pour Pekwm
+#exec ck-launch-session pekwm
 
 # Pour DWM
-# Set wallpaper
-#nitrogen --restore &
-# start the screensaver
-#xscreensaver -no-splash &
 # Dzen & conky
 #(sleep 3s && exec ~/.conky/dwm/conky_start_dwm.sh | dzen2 -x '950' -e '' -fg '#737373' -bg '#262626' -w '490' -h '14' -ta r -fn '-*-fixed-medium-r-*-*-12-*-*-*-*-*-iso8859-*' -p ) &
 # Start dwm
 #exec ck-launch-session ~/scripts/dwm-start
 
+# Pour WMFS
+exec ck-launch-session ~/scripts/wmfs-start
