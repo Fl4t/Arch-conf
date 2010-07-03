@@ -77,13 +77,9 @@ set wildignore=*.o,*~,*.cmo,*.cmi,*.a,*.cmx,*.cmxa
 " affiche les paires de parenthèses (),{},[]
 set showmatch
 
-" autoriser de monter/descendre avec les fleches gauche/droite
-set whichwrap=<,>,[,]
-
 " affichage rapide
 set ttyfast
 set ttyscroll=1
-let loaded_matchparen = 1
 
 " ligne de mode
 set modeline
@@ -152,7 +148,7 @@ set matchpairs+=<:>
 set comments-=s1:/*,mb:*,ex:*/
 set comments+=s:/*,mb:**,ex:*/
 set comments+=fb:*
-set comments+=b:\"
+set comments+=b:/"
 set comments+=n::
 
 " Basic abbreviations
@@ -204,15 +200,6 @@ if !has("gui_running")
 		autocmd VimLeave * :silent :!echo -ne "\033P\033]12;green\007\033\\"
 	endif
 endif
-
-" Rajoute automatiquement la permission 'exécutable' aux fichiers dont
-" la première ligne commence par #!<n'importe quel caractère>/bin/.
-function ModeChange()
-  if getline(1) =~ "^#!.*/bin/"
-      silent !chmod u+x <afile>
-  endif
-endfunction
-au BufWritePost * call ModeChange()
 
 " ----------------------------------------------------------------------------
 " Raccourci
