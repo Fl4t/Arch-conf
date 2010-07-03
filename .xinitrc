@@ -9,19 +9,19 @@
 # setxkbmap -option caps:escape &
 
 # Kill X
-setxkbmap -option terminate:ctrl_alt_bksp
+setxkbmap -option terminate:ctrl_alt_bksp &
 
 # Numpad enabled
-numlockx
+numlockx &
 
 # Wallpaper
 nitrogen --restore &
 
 #URxvt daemon
-urxvtd -q -f -o
+urxvtd -q -f -o &
 
 # Pour COMPIZ
-#exec ck-launch-session start-compiz.sh
+#exec ck-launch-session ~/scripts/compiz-start.sh
 
 # Pour Pekwm
 #exec ck-launch-session pekwm
@@ -33,4 +33,6 @@ urxvtd -q -f -o
 #exec ck-launch-session ~/scripts/dwm-start
 
 # Pour WMFS
-exec ck-launch-session ~/scripts/wmfs-start
+#(sleep 4s && xcompmgr -c -t-5 -l-5 -r4.2 -o.55) &
+#(sleep 4s && devilspie) &
+exec ck-launch-session ~/scripts/wmfs-start.sh 
