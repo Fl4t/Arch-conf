@@ -1,7 +1,0 @@
-style "default"
-{
-  GtkScrollbar::has-forward-stepper = 1
-  GtkScrollbar::has-backward-stepper = 0
-  GtkScrollbar::has-secondary-forward-stepper = 0
-  GtkScrollbar::has-secondary-backward-stepper = 1
-}
