@@ -5,45 +5,63 @@
 ! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! ----------------------------------------------------------------------------
 
-!Xft font settings -----------------------------------------------------------
+! Xft font settings -----------------------------------------------------------
 
-Xft.antialias: true
-Xft.dpi: 96 
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
+Xft*antialias: true
+Xft*dpi: 96 
+Xft*rgba: rgb
+Xft*hinting: true
+Xft*lcdfilter:  lcddefault
+Xft*hintstyle:  hintfull
 
 ! Xcursor --------------------------------------------------------------------
 
 Xcursor*theme: Vanilla-DMZ-AA
-Xcursor.size:  16
+Xcursor*size:  16
 
-!URxvt settings --------------------------------------------------------------
+! URxvt settings --------------------------------------------------------------
 
+! fonts
 URxvt*font: xft:terminus:style=Regular:pixelsize=11
 URxvt*boldFont: xft:terminus:style=Bold:pixelsize=11
 URxvt*italicFont: xft:terminus:style=Italic:pixelsize=11
 URxvt*boldItalicFont: xft:terminus=boldItalic:pixelsize=11
+
+! history
 URxvt*saveLines: 32767
-!Urxvt*borderless: true
+
+! eyecanky
 URxvt*scrollBar: false
 URxvt*colorUL: #00ff5f
 URxvt*pointerBlank: true
 URxvt*loginShell: false
-URxvt*secondaryScroll: true
+URxvt*visualBell: false 
+URxvt*fading: 10%
+URxvt*cursorBlink: false 
+URxvt*transparent: true
+URxvt*shading: 15
+URxvt*title: fl4t@archlinux 
+URxvt*depth: 32 
+URxvt*inheritPixmap: true
+URxvt*urgentOnBell: true
+
+! perl
 URxvt*perl-lib: /usr/lib/urxvt/perl/
 URxvt*perl-ext-common: default,matcher
+
+! url launchable
 URxvt*urlLauncher: /usr/bin/firefox
 URxvt*matcher.button: 1
+
 URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt*visualBell: false
-URxvt*urgentOnBell: true
 URxvt*keysym.C-u: perl:matcher
-URxvt*cutchars: `”()'*<>[]{|}
+URxvt*cutchars: "()*,<>[]{}|'
+URxvt*insecure: true
+URxvt*mapAlert: true
 URxvt*skipBuiltinGlyphs: true
-URxvt*cursorBlink: false 
-URxvt*geometry: 95x41
+URxvt*imLocale: fr_FR.UTF-8
+ 
+!URxvt*geometry: 95x41
 
 ! terminal colors ------------------------------------------------------------
 
