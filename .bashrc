@@ -9,39 +9,47 @@ if [ -z "$PS1" ]; then
 	return
 fi
 
+#Complétion plus intelligente
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-#default host
-if [ -z "$HOST" ] ; then
-	export HOST=${HOSTNAME}
-fi
+# lecture colorée de logs
+logview()
+{
+    ccze -A < $1 | less -R
+}
 
-#default term
-export TERM="rxvt-unicode"
+# lecture colorée de logs en directfunction logview()
+logtail()
+{
+        tail -f $1 | ccze
+}
 
-#default editor
+# editeur par default
 export EDITOR="vim"
 
-#colorized ls
+# colorized ls
 eval `dircolors -b`
 
-#PS1 personalised
+# PS1 personalised
 PS1='\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;34m\]\h \[\033[01;33m\]\W \[\033[1;30m\]>\[\033[0;32m\]>\[\033[1;32m\]>\[\033[m\] \[\033[00m\]'
 
-#indent on sudo
+# indent on sudo
 complete -cf sudo
 
-#Now when you open a new shell window, you can simply type the name of your scripts.
+# Now when you open a new shell window, you can simply type the name of your scripts.
 PATH=$PATH:~/scripts
 
-#color grep
+# color grep
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
-#faster completion
-set show-all-if-ambiguous on
+# faster completion
+# set show-all-if-ambiguous on
+
+# Support des terminaux redimensionnables
+shopt -s checkwinsize
 
 # {{{ extract utility
 extract () {
@@ -68,9 +76,9 @@ extract () {
 
 # history options
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd*"
-export HISTFILESIZE=2000
+export HISTFILESIZE="20000"
 export HISTCONTROL="ignoreboth"
-export HISTSIZE=500
+export HISTSIZE="5000"
 
 # more for less
 export LESS_TERMCAP_mb=$'\E[01;31m'
