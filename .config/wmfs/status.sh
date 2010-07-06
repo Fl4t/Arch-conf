@@ -12,7 +12,7 @@ NBLINE=`$CONKYCMD -i 1 | wc -l`
 
 color0="echo \\\\#A9DB67\\\\"
 color1="echo \\\\#BEBEBE\\\\"
-color2="echo \\\\#252525\\\\"
+color2="echo \\\\#393939\\\\"
 
 TXT=`cat $FICHIER | tail -n $NBLINE`
 TXT="<c2>$TXT"
