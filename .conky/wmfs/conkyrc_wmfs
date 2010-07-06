@@ -1,15 +1,14 @@
 update_interval 0.9
 out_to_console yes
 
-#[ PAC: ${execi 300 pacman -Qu | wc -l} ]
 TEXT
-
-[ PAC: ${execi 3600 pacman -Qu | wc -l} ]
-[ TEMP: ${execi 1 sensors | grep -A 0 'temp1' | cut -c15-16}C ]
+[ UP: ${totaldown eth0} ]
+[ DOWN: ${totalup eth0} ]
 [ NET: ${addr eth0} ]
+[ PAC: ${execi 3600 pacman -Qu | wc -l} ]
 [ CPU: ${cpu}% ]  
+[ TEMP: ${execi 1 sensors | grep -A 0 'temp1' | cut -c15-16}C ]
 [ RAM: ${memperc}% ]
 [ LOAD: $loadavg ]
-[ UP: $uptime_short ]
 [ DATE: ${time %d %b %Y} ]
 [ TIME: ${time %H:%M:%S} ]
