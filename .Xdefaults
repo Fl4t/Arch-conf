@@ -22,10 +22,10 @@ Xcursor*size:  16
 ! URxvt settings --------------------------------------------------------------
 
 ! fonts
-URxvt*font: xft:terminus:style=Regular:pixelsize=11
-URxvt*boldFont: xft:terminus:style=Bold:pixelsize=11
-URxvt*italicFont: xft:terminus:style=Italic:pixelsize=11
-URxvt*boldItalicFont: xft:terminus=boldItalic:pixelsize=11
+URxvt*font: xft:Envy Code R:style=Regular:pixelsize=12
+URxvt*boldFont: xft:Envy Code R:style=Bold:pixelsize=12
+URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=12
+URxvt*boldItalicFont: xft:Envy Code R=boldItalic:pixelsize=12
 
 ! history
 URxvt*saveLines: 32767
@@ -82,8 +82,8 @@ URxvt*imLocale: fr_FR.UTF-8
 !#include "/home/fl4t/.colorsheme/rydgel"
 !#include "/home/fl4t/.colorsheme/tango"
 !#include "/home/fl4t/.colorsheme/zenburn"
-#include "/home/fl4t/.colorsheme/tam"
+!#include "/home/fl4t/.colorsheme/tam"
 !#include "/home/fl4t/.colorsheme/evanlec"
 !#include "/home/fl4t/.colorsheme/gnometerm"
 !#include "/home/fl4t/.colorsheme/miro"
-!#include "/home/fl4t/.colorsheme/sicpsnake"
+#include "/home/fl4t/.colorsheme/sicpsnake"
