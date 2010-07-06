@@ -45,6 +45,8 @@ scripts/gmail.py
 documents/
 .config/geany/
 .mplayer/
-.weechat/
 .vimperator/
 .vimperatorrc
+.dvdcss/
+.irssi_fnotify
+.weechat/
