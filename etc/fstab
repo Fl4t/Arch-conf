@@ -1,16 +1,16 @@
 # # /etc/fstab: static file system information
 #
-# <file system>        <dir>         <type>    <options>          		<dump> <pass>
-devpts                 /dev/pts      devpts    defaults           	 	0      0
-shm                    /dev/shm      tmpfs     nodev,nosuid       	 	0      0
+# <file system>        <dir>         <type>    <options>				<dump> <pass>
+devpts                 /dev/pts      devpts    defaults				 	0      0
+shm                    /dev/shm      tmpfs     nodev,nosuid				0      0
 
-#/dev/cdrom             /media/cd   auto    ro,user,noauto,unhide   		0      0
-#/dev/dvd               /media/dvd  auto    ro,user,noauto,unhide   		0      0
-#/dev/fd0               /media/fl   auto    user,noauto             		0      0
+#/dev/cdrom             /media/cd   auto	ro,user,noauto,unhide			0      0
+#/dev/dvd               /media/dvd  auto	ro,user,noauto,unhide			0      0
+#/dev/fd0               /media/fl   auto	user,noauto	    			0      0
 
-/dev/sdb1		/ 	          ext4 	    defaults,noatime,nodiratime 	0      1
-/dev/sdb2 		/var 	      reiserfs 	defaults,noatime,notail         0      1
-/dev/sdb3		 swap 	      swap      defaults 			            0      0
+/dev/sdb1		/	    ext4 	    defaults,noatime,nodiratime 	0      1
+/dev/sdb2 		/var	  reiserfs	    defaults,noatime,notail	        0      1
+/dev/sdb3		 swap 	      swap	    defaults 		                0      0
 /dev/sdb4 		/home 	      ext4 	    defaults,noatime,nodiratime 	0      2
 
 //192.168.1.6/openshare /media/lacie/openshare      cifs    auto,noatime,user,rw,credentials=/home/fl4t/.mount_lacie.txt,_netdev,noexec,noperm    0   0
