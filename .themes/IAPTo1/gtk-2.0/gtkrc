@@ -44,16 +44,16 @@ style "default"
   fg[SELECTED]     	 = "#1e1e1e"
   fg[INSENSITIVE]  	 = "#333333"
 
-  bg[NORMAL]       	 = "#252525" # Normal Background
-  bg[ACTIVE]       	 = "#252525"
+  bg[NORMAL]       	 = "#393939" # Normal Background
+  bg[ACTIVE]       	 = "#393939"
   bg[PRELIGHT]     	 = "#1e1e1e" # Expand prelight bg
   bg[SELECTED]     	 = "#1e1e1e"
   bg[INSENSITIVE]  	 = "#1e1e1e"
 
-  base[NORMAL]     	 = "#252525" # Background, most
+  base[NORMAL]     	 = "#393939" # Background, most
   base[ACTIVE]     	 = "#1e1e1e" # Menu active item in inactive window
   base[PRELIGHT]   	 = "#A9DB67"
-  base[INSENSITIVE] = "#252525" # Inactive Entry bg
+  base[INSENSITIVE] = "#393939" # Inactive Entry bg
   base[SELECTED]     = "#1e1e1e" # Menu active item in active window
 
   text[NORMAL]	 = "#c3c3c3" # Text in window, arrows
@@ -1292,8 +1292,8 @@ widget_class "*Tool*GtkButton" style "toolbuttons"
 
 style "menubar" = "default"
 {
-  bg[NORMAL] = "#252525"
-  fg[NORMAL] = "#252525"
+  bg[NORMAL] = "#393939"
+  fg[NORMAL] = "#393939"
   fg[PRELIGHT] = "#A9DB67"
   text[PRELIGHT] = "#A9DB67"
   fg[SELECTED]      = "#A9DB67"
@@ -1540,7 +1540,7 @@ style "notebook"		= "default"
 
 style "tooltips"	= "default"
 {
-  bg[NORMAL]		= "#252525"
+  bg[NORMAL]		= "#393939"
 }
 
 ##################### RULER ##################
