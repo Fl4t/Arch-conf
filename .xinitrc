@@ -21,18 +21,10 @@ nitrogen --restore &
 urxvtd -q -f -o &
 
 # Pour COMPIZ
-#exec ck-launch-session ~/scripts/compiz-start.sh
+#exec ck-launch-session compiz-start.sh
 
 # Pour Pekwm
 #exec ck-launch-session pekwm
 
-# Pour DWM
-# Dzen & conky
-#(sleep 3s && exec ~/.conky/dwm/conky_start_dwm.sh | dzen2 -x '950' -e '' -fg '#737373' -bg '#262626' -w '490' -h '14' -ta r -fn '-*-fixed-medium-r-*-*-12-*-*-*-*-*-iso8859-*' -p ) &
-# Start dwm
-#exec ck-launch-session ~/scripts/dwm-start
-
 # Pour WMFS
-#(sleep 4s && xcompmgr -c -t-5 -l-5 -r4.2 -o.55) &
-#(sleep 4s && devilspie) &
-exec ck-launch-session ~/scripts/wmfs-start.sh 
+exec ck-launch-session wmfs-start.sh 
