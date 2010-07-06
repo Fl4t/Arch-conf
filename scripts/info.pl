@@ -345,8 +345,8 @@ if ( $display =~ "OS"){
   unshift(@line, "$version");
 }
 
-my $c1 = "\e[1;34m";
-my $c2 = "\e[1;34m";
+my $c1 = "\e[1;32m";
+my $c2 = "\e[1;32m";
 
 system("clear");
 
