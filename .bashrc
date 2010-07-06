@@ -46,10 +46,10 @@ export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
 # faster completion
-# set show-all-if-ambiguous on
+set show-all-if-ambiguous on
 
 # Support des terminaux redimensionnables
-shopt -s checkwinsize
+# shopt -s checkwinsize
 
 # {{{ extract utility
 extract () {
