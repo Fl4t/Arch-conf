@@ -65,7 +65,7 @@ URxvt*imLocale: fr_FR.UTF-8
 
 ! terminal colors ------------------------------------------------------------
 
-*background: #252525
+*background: #393939
 *foreground: #babdb6
 
 !#include "/home/fl4t/.colorsheme/flashy"
