@@ -9,7 +9,7 @@
 # setxkbmap -option caps:escape &
 
 # Kill X
-setxkbmap -option terminate:ctrl_alt_bksp &
+setxkbmap -option terminate:ctrl_alt_bksp
 
 # Numpad enabled
 numlockx &
@@ -18,7 +18,10 @@ numlockx &
 nitrogen --restore &
 
 #URxvt daemon
-urxvtd -q -f -o &
+urxvtd -q -f -o
+
+#MPD
+mpd /home/fl4t/.mpd/config
 
 # Pour COMPIZ
 #exec ck-launch-session compiz-start.sh
