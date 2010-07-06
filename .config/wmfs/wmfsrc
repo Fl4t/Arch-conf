@@ -15,14 +15,14 @@
 [/misc]
 
 [bar]
-        bg     = "#252525"
+        bg     = "#393939"
         fg     = "#A9DB67"
         border = false
         # selbar = false   #not worked now, see section [selbar]
 
         # Remove this section to disable the selbar.
         [selbar]
-                bg = "#252525"
+                bg = "#393939"
                 fg = "#A9DB67"
 
                 # Cut title lenght
@@ -36,7 +36,7 @@
 [/bar]
 
 [layouts]
-        bg = "#252525"
+        bg = "#393939"
         fg = "#A9DB67"
 
         # Border around the layout button.
@@ -49,7 +49,7 @@
         placement = "left"
 
         # Keep layout geo for free layout
-        keep_layout_geo = false
+        keep_layout_geo = "true"
 
         # Tiling layouts.
         [layout] type = "tile_right"        symbol = "  \i[1;1;15;13;/home/fl4t/.config/wmfs/wh15x13/tr.png]\" [/layout]
@@ -68,8 +68,8 @@
 
 [tags]
         tag_round      = false
-        occupied_bg    = "#252525"
-        sel_fg         = "#252525"
+        occupied_bg    = "#393939"
+        sel_fg         = "#393939"
         sel_bg         = "#A9DB67"
         urgent_bg      = "#DD1111"
         urgent_fg      = "#000000"
@@ -91,10 +91,10 @@
         mouse_button_tag_next      = "4"
         mouse_button_tag_prev      = "5"
 
-	[tag] screen = 0 name = "thunar" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "bottom" layout = "free" [/tag]
-	[tag] screen = 0 name = "browser" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "bottom" layout = "grid" [/tag]
-    	[tag] screen = 0 name = "weechat" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "bottom" layout = "tile left" [/tag]
-    	[tag] screen = 0 name = "term" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "bottom" layout = "tile left" [/tag]
+	[tag] screen = 1 name = "thunar" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "top" layout = "free" [/tag]
+	[tag] screen = 2 name = "browser" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "top" layout = "grid" [/tag]
+    	[tag] screen = 3 name = "weechat" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "top" layout = "tile left" [/tag]
+    	[tag] screen = 4 name = "term" mwfact = 0.65 nmaster = 1 resizehint = false infobar_position = "top" layout = "layer" [/tag]
 [/tags]
 
 [root]
@@ -110,10 +110,10 @@
         client_round         = false
         border_height        = 3
         border_shadow        = false
-        border_normal        = "#252525"
-        border_focus         = "#252525"
-        resize_corner_normal = "#252525"
-        resize_corner_focus  = "#252525"
+        border_normal        = "#393939"
+        border_focus         = "#393939"
+        resize_corner_normal = "#393939"
+        resize_corner_focus  = "#393939"
 
         # Space between tiled clients
         padding = 15
@@ -122,7 +122,7 @@
         modifier = "Alt"
 
         # Set automatic free or max client
-        autofree = "mplayer,nitrogen"
+        autofree = "MPlayer,nitrogen,Download,gimp"
         # automax  = "Navigator"
 
         [mouse] button = "1" func = "client_raise" [/mouse]
@@ -134,8 +134,8 @@
 #        [titlebar]
 #                stipple   = false
 #                height    = 1
-#                fg_normal = "#252525"
-#                fg_focus  = "#252525"
+#                fg_normal = "#393939"
+#                fg_focus  = "#393939"
 #
 #                [mouse] button = "1" func = "client_raise" [/mouse]
 #                [mouse] button = "1" func = "mouse_move"   [/mouse]
@@ -166,11 +166,11 @@
                 # Available "center", "left", "right" menu align. Default: "center".
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Thunar"        func = "spawn" cmd = "thunar" [/item]
-                [item] name = "Terminal"        func = "spawn" cmd = "urxvt" [/item]
+                [item] name = "Terminal"        func = "spawn" cmd = "urxvtc" [/item]
                 [item] name = "Apps" submenu = "appmenu"                   [/item]
                 [item] name = "Tools" submenu = "toolmenu"                   [/item]
                 [item] name = "Style" submenu = "stylemenu"                   [/item]
@@ -182,8 +182,8 @@
                 name = "appmenu"
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Firefox"         func = "spawn" cmd = "firefox"     [/item]
                 [item] name = "Pidgin"         func = "spawn" cmd = "pidgin"     [/item]
@@ -194,8 +194,8 @@
                 name = "toolmenu"
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Calc"         func = "spawn" cmd = "xcalc"     [/item]
                 [item] name = "Gvim"         func = "spawn" cmd = "gvim"     [/item]
@@ -205,8 +205,8 @@
                 name = "stylemenu"
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Lxapp"         func = "spawn" cmd = "lxappearance"     [/item]
                 [item] name = "Nitrogen"         func = "spawn" cmd = "nitrogen ~/documents/wallpaper/"     [/item]
@@ -216,8 +216,8 @@
                 name = "wmfsmenu"
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Next tag"        func = "tag_next"                  [/item]
                 [item] name = "Previous tag"    func = "tag_prev"                  [/item]
@@ -231,8 +231,8 @@
                 name = "exitmenu"
                 align = "left"
 
-                fg_focus  = "#252525" bg_focus  = "#A9DB67"
-                fg_normal = "#A9DB67" bg_normal = "#252525"
+                fg_focus  = "#393939" bg_focus  = "#A9DB67"
+                fg_normal = "#A9DB67" bg_normal = "#393939"
 
                 [item] name = "Reboot"         func = "spawn" cmd = "sudo reboot"     [/item]
                 [item] name = "Shutdown"         func = "spawn" cmd = "sudo halt"     [/item]
@@ -242,7 +242,7 @@
 #                name = "clientmenu"
 #
 #                fg_focus  = "#D4D4D4" bg_focus  = "#003366"
-#                fg_normal = "#D4D4D4" bg_normal = "#252525"
+#                fg_normal = "#D4D4D4" bg_normal = "#393939"
 
                 # Check items: possible 'check_max' or 'check_free'.
 #                [item] name = "Close"    func = "client_kill"                      [/item]
@@ -310,8 +310,8 @@
         [key] mod = {"Super","Alt"} key = "space" func = "layout_prev" [/key]
 
         # Open
-        [key] mod = {"Control"} key = "Return" func = "spawn" cmd = "urxvt" [/key]
-        [key] mod = {"Super"} key = "F1" func = "spawn" cmd = "urxvt" [/key]
+        [key] mod = {"Control"} key = "Return" func = "spawn" cmd = "urxvtc" [/key]
+        [key] mod = {"Super"} key = "F1" func = "spawn" cmd = "urxvtc" [/key]
         [key] mod = {"Super"} key = "F2" func = "spawn" cmd = "firefox" [/key]
 
         #Launcher,ViWMFS
