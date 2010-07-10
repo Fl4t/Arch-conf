@@ -111,7 +111,7 @@ hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0
 
 " color terminal definitions
 hi Cursor ctermfg=black ctermbg=white
-hi Normal ctermfg=grey ctermbg=black
+hi Normal ctermfg=NONE ctermbg=black
 hi Number ctermfg=darkgreen
 highlight Operator ctermfg=yellow
 highlight Conditional ctermfg=darkred

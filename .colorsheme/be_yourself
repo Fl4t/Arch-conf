@@ -1,0 +1,28 @@
+! Be Yourself
+! Black
+*color0: #313131
+*color8: #5b5b5b
+! Red
+*color1: #de4552
+*color9: #de6e77
+! Green
+*color2: #8aa235
+*color10: #a0b45a
+! Yellow
+*color3: #e97d18
+*color11: #e99c54
+! Blue
+*color4: #4b7276
+*color12: #79b8be
+! Purple
+*color5: #6f2861
+*color13: #cf4eb5
+! Cyan
+*color6: #4db9d7
+*color14: #77d7e7
+!*color14: #46a4ff
+! White
+*color7: #a9a9a9
+*color15: #e0e0e0
+
+

@@ -8911,3 +8911,13 @@ Format detected only with low score of 24, misdetection possible!
 [mp3 @ 0x2d6ed70]Could not find codec parameters (Audio: mp3, 0 channels, s16)
 [mp3 @ 0x2d6ed70]Estimating duration from bitrate, this may be inaccurate
 Jul 06 21:43 : ffmpeg: Couldn't find stream info
+Jul 07 00:34 : avahi: Client Disconnected, will reconnect shortly
+Jul 07 00:34 : avahi: Could not reconnect: Daemon not running
+Jul 07 03:29 : avahi: Client Disconnected, will reconnect shortly
+Jul 07 03:29 : avahi: Could not reconnect: Daemon not running
+Jul 07 11:23 : avahi: Client Disconnected, will reconnect shortly
+Jul 07 11:23 : avahi: Could not reconnect: Daemon not running
+Jul 09 01:05 : avahi: Client Disconnected, will reconnect shortly
+Jul 09 01:05 : avahi: Could not reconnect: Daemon not running
+Jul 09 20:18 : avahi: Client Disconnected, will reconnect shortly
+Jul 09 20:18 : avahi: Could not reconnect: Daemon not running

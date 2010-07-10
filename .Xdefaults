@@ -7,7 +7,7 @@
 
 ! Xft font settings -----------------------------------------------------------
 
-Xft*antialias: true
+Xft*antialias: false
 Xft*dpi: 96 
 Xft*rgba: rgb
 Xft*hinting: true
@@ -28,22 +28,23 @@ URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=10
 URxvt*boldItalicFont: xft:Envy Code R=boldItalic:pixelsize=10
 
 ! history
-URxvt*saveLines: 32767
+URxvt*saveLines: 65535
 
 ! eyecanky
 URxvt*scrollBar: false
-URxvt*colorUL: #00ff5f
+URxvt*colorUL: #84B5C1
 URxvt*pointerBlank: true
 URxvt*loginShell: false
 URxvt*visualBell: false 
-URxvt*fading: 10%
+URxvt*fading: 10
 URxvt*cursorBlink: false 
-URxvt*transparent: true
-URxvt*shading: 15
+!URxvt*transparent: true
+!URxvt*shading: 15
 URxvt*title: fl4t@archlinux 
 URxvt*depth: 32 
-URxvt*inheritPixmap: true
+!URxvt*inheritPixmap: true
 URxvt*urgentOnBell: true
+!URxvt*geometry: 95x41
 
 ! perl
 URxvt*perl-lib: /usr/lib/urxvt/perl/
@@ -61,7 +62,6 @@ URxvt*mapAlert: true
 URxvt*skipBuiltinGlyphs: true
 URxvt*imLocale: fr_FR.UTF-8
  
-!URxvt*geometry: 95x41
 
 ! terminal colors ------------------------------------------------------------
 
@@ -87,3 +87,4 @@ URxvt*imLocale: fr_FR.UTF-8
 !#include "/home/fl4t/.colorsheme/gnometerm"
 !#include "/home/fl4t/.colorsheme/miro"
 #include "/home/fl4t/.colorsheme/sicpsnake"
+!#include "/home/fl4t/.colorsheme/jasonwryanblue"
