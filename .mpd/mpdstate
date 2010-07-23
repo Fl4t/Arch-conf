@@ -1,7 +1,5 @@
 audio_device_state:1:My ALSA Device
-state: play
-current: 25
-time: 161
+state: stop
 random: 0
 repeat: 0
 single: 0
