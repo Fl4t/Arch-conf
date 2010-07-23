@@ -76,6 +76,7 @@ alias pacup='sudo pacman -Syu'
 alias pacseek="pacman Sl | cut -d' ' -f2 | grep "
 
 # Misc
+alias mkv='mplayer -vo vdpau -vc ffh264vdpau'
 alias locate='locate -i'
 alias updatefonts='sudo fc-cache -vf'
 alias xprop='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
