@@ -14,7 +14,7 @@ Rootmenu = "" 	{
 		} 
 	Submenu = "Style" 	{
 		Entry = "Lxapp" { Actions = "Exec lxappearance &" }
-		Entry = "Nitrogen" { Actions = "Exec nitrogen ~/documents/wallpaper/ &" }
+		Entry = "Nitrogen" { Actions = "Exec nitrogen ~/docs/img/ &" }
 		}
 	Submenu = "PekWM" {
 		Entry = "Reload" { Actions = "Reload" }

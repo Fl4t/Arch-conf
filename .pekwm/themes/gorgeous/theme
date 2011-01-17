@@ -154,7 +154,7 @@ Menu {
 		Font = "$FONT"
 		Background = "Solid #191919"
 		Item = "Empty"
-		Text = "#804EA0"
+		Text = "#DDDDDD"
 		Arrow = "Image arrow_selected.png#fixed"
 	}
 }

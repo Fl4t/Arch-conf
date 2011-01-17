@@ -2,13 +2,12 @@
 ! file:     ~/.Xdefaults
 ! author:   Fl4t
 ! modified: June 2010
-! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! ----------------------------------------------------------------------------
 
 ! Xft font settings -----------------------------------------------------------
 
 Xft*antialias: false
-Xft*dpi: 96 
+Xft*dpi: 96
 Xft*rgba: rgb
 Xft*hinting: true
 Xft*lcdfilter:  lcddefault
@@ -22,10 +21,14 @@ Xcursor*size:  16
 ! URxvt settings --------------------------------------------------------------
 
 ! fonts
-URxvt*font: xft:Envy Code R:style=Regular:pixelsize=10
-URxvt*boldFont: xft:Envy Code R:style=Bold:pixelsize=10
-URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=10
-URxvt*boldItalicFont: xft:Envy Code R=boldItalic:pixelsize=10
+!URxvt*font: xft:lime.se:style=Regular:pixelsize=13
+!URxvt*boldFont: xft:lime.se:style=Bold:pixelsize=13
+!URxvt*italicFont: xft:lime.se:style=Italic:pixelsize=13
+!URxvt*boldItalicFont: xft:lime.se:boldItalic:pixelsize=13
+URxvt*font: xft:Envy Code R:medium:pixelsize=13
+URxvt*boldFont: xft:Envy Code R:medium:pixelsize=13
+URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=13
+URxvt*boldItalicFont: xft:Envy Code R:boldItalic:pixelsize=13
 
 ! history
 URxvt*saveLines: 65535
@@ -36,13 +39,13 @@ URxvt*colorUL: #84B5C1
 URxvt*pointerBlank: true
 URxvt*loginShell: false
 URxvt*visualBell: false 
-URxvt*fading: 10
+!URxvt*fading: 10
 URxvt*cursorBlink: false 
-!URxvt*transparent: true
-!URxvt*shading: 15
+URxvt*transparent: true
+URxvt*shading: 0
 URxvt*title: fl4t@archlinux 
 URxvt*depth: 32 
-!URxvt*inheritPixmap: true
+URxvt*inheritPixmap: true
 URxvt*urgentOnBell: true
 !URxvt*geometry: 95x41
 
@@ -69,6 +72,7 @@ URxvt*imLocale: fr_FR.UTF-8
 *foreground: #babdb6
 
 !#include "/home/fl4t/.colorsheme/flashy"
+
 !#include "/home/fl4t/.colorsheme/necromancer"
 !#include "/home/fl4t/.colorsheme/tangoesque"
 !#include "/home/fl4t/.colorsheme/thayer"
@@ -77,7 +81,7 @@ URxvt*imLocale: fr_FR.UTF-8
 !#include "/home/fl4t/.colorsheme/derp"
 !#include "/home/fl4t/.colorsheme/digerati"
 !#include "/home/fl4t/.colorsheme/gnometerm"
-!#include "/home/fl4t/.colorsheme/jasonwryan"
+#include "/home/fl4t/.colorsheme/jasonwryan"
 !#include "/home/fl4t/.colorsheme/rezza"
 !#include "/home/fl4t/.colorsheme/rydgel"
 !#include "/home/fl4t/.colorsheme/tango"
@@ -86,5 +90,5 @@ URxvt*imLocale: fr_FR.UTF-8
 !#include "/home/fl4t/.colorsheme/evanlec"
 !#include "/home/fl4t/.colorsheme/gnometerm"
 !#include "/home/fl4t/.colorsheme/miro"
-#include "/home/fl4t/.colorsheme/sicpsnake"
+!#include "/home/fl4t/.colorsheme/sicpsnake"
 !#include "/home/fl4t/.colorsheme/jasonwryanblue"

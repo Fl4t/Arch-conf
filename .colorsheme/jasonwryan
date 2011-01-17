@@ -1,33 +1,31 @@
-! Black
-*color0:            #222222
-*color8:            #454545
+! -------------------------------------------------
+! file: .colours/dark
+! author: jason ryan - jasonwryan.com/
+! vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=txt:
+! -------------------------------------------------
 
-! Red
-*color1:            #9E5641
-*color9:            #CC896D
-
-! Green
-*color2:            #6C7E55
-*color10:           #7DB37D
-
-! Yellow
-*color3:            #CAAF2B
-*color11:           #BFB556
-
-! Blue
-*color4:            #4c8ea1
-*color12:           #6bc1d0
-
-! Magenta
-*color5:            #956D9D
-*color13:           #C18FCB
-
-! Cyan
-*color6:            #7C9AA6
-*color14:           #8FADBF
-
-! White
-*color7:            #909090
-*color15:           #FFFFFF
-
-! vim: syn=xdefaults et sw=2
+!! jwr dark
+!black
+*color0: #333333
+*color8: #3D3D3D
+!red
+*color1: #8C4665
+*color9: #BF4D80
+!green
+*color2: #287373
+*color10: #53A6A6
+!yellow
+*color3: #7C7C99
+*color11: #9E9ECB
+!blue
+*color4: #395573
+*color12: #477AB3
+!magenta
+*color5: #5E468C
+*color13: #7E62B3
+!cyan
+*color6: #31658C
+*color14: #6096BF
+!white
+*color7: #899CA1
+*color15: #C0C0C0

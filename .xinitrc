@@ -5,6 +5,9 @@
 # Executed by startx (run your window manager from here)
 # ...or the Window Manager of your choice
 
+# VirtualBox Guest
+/usr/bin/VBoxClient-all &
+
 # disable CapsLock & map to Escape
 # setxkbmap -option caps:escape &
 
@@ -12,7 +15,7 @@
 setxkbmap -option terminate:ctrl_alt_bksp
 
 # Numpad enabled
-numlockx &
+# numlockx &
 
 # Wallpaper
 nitrogen --restore &
@@ -21,13 +24,17 @@ nitrogen --restore &
 urxvtd -q -f -o
 
 #MPD
-mpd /home/fl4t/.mpd/config
+#mpd /home/fl4t/.mpd/config
 
 # Pour COMPIZ
 #exec ck-launch-session compiz-start.sh
 
 # Pour Pekwm
-#exec ck-launch-session pekwm
+# exec ck-launch-session pekwm
+# exec pekwm
 
 # Pour WMFS
 exec ck-launch-session wmfs-start.sh 
+
+# Pour dwm
+# exec dwm

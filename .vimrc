@@ -20,13 +20,10 @@ set mousehide "hide mouse when typing
 " set cinoptions=g0,:0,l1,(0,t0 "option pour cindent
 set expandtab " pour remplacer les espaces par des tabulations
 set shiftwidth=4 " nombre de  caractère utilisé pour l'identation
-set tabstop=8 " nombre d'éspace par tab
+set tabstop=4 " nombre d'éspace par tab
 set softtabstop=4
 set smarttab
 set noet
-set wildchar=<tab>
-set wildmode=longest:full,full
-set backspace=indent,eol,start
 filetype on
 filetype plugin on
 filetype indent on
@@ -70,6 +67,8 @@ set number " show line numbers
 set nobackup " disable backup files (filename~)
 
 " Superbe menu de complétion \o/
+set wildchar=<tab>
+set backspace=indent,eol,start
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.o,*~,*.cmo,*.cmi,*.a,*.cmx,*.cmxa
@@ -182,28 +181,28 @@ au! BufWritePost .vimrc source %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 set errorformat=%f:%l:%c:%*\d:%*\d:%*\s%m
 
-if !has("gui_running")
+"if !has("gui_running")
 	" À défaut de pouvoir changer la forme du curseur
 	" en fonction du mode de Vim, on peut changer sa couleur
 	" en passant par des fonctions de contrôle.
-	if &term =~ "rxvt-unicode"
-		let &t_SI = "\033]12;red\007"
-		let &t_EI = "\033]12;green\007"
-		:silent !echo -ne "\033]12;green\007"
-		autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
-	endif
-	" screen rajoute une couche qu'il faut percer.
-	if &term =~ "screen"
-		let &t_SI = "\033P\033]12;red\007\033\\"
-		let &t_EI = "\033P\033]12;green\007\033\\"
-		:silent !echo -ne "\033P\033]12;green\007\033\\"
-		autocmd VimLeave * :silent :!echo -ne "\033P\033]12;green\007\033\\"
-	endif
-endif
+"	if &term =~ "rxvt-unicode"
+"		let &t_SI = "\033]12;red\007"
+"		let &t_EI = "\033]12;green\007"
+"		:silent !echo -ne "\033]12;green\007"
+"		autocmd VimLeave * :silent :!echo -ne "\033]12;green\007"
+"	endif
+"	" screen rajoute une couche qu'il faut percer.
+"	if &term =~ "screen"
+"		let &t_SI = "\033P\033]12;red\007\033\\"
+"		let &t_EI = "\033P\033]12;green\007\033\\"
+"		:silent !echo -ne "\033P\033]12;green\007\033\\"
+"		autocmd VimLeave * :silent :!echo -ne "\033P\033]12;green\007\033\\"
+"	endif
+"endif
 
 " ----------------------------------------------------------------------------
 " Raccourci
 " ----------------------------------------------------------------------------
 
 " Toggle dark/light default colour theme for shitty terms
-map <F2> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+" map <F2> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>

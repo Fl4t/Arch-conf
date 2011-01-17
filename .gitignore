@@ -51,3 +51,7 @@ documents/
 .irssi_fnotify
 .weechat/
 .ncmpcpp/error.log
+.vboxclient-clipboard.pid
+.vboxclient-display.pid
+.vboxclient-seamless.pid
+docs/
