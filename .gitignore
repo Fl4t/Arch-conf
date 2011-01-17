@@ -55,3 +55,4 @@ documents/
 .vboxclient-display.pid
 .vboxclient-seamless.pid
 docs/
+.config/squeeze/
