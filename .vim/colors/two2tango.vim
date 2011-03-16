@@ -1,7 +1,7 @@
 " Vim color file
 " Name: two2tango
 " Maintainer: Erik Falor <ewfalor@gmail.com>
-" Version: 1.0
+" Version: 1.1
 "
 " Big props to Panos Laganakos <panos.laganakos@gmail.com>
 " for the original darktango.vim colorscheme upon which 
@@ -36,6 +36,7 @@ let s:Aluminium		= ['#eeeeec', '#d3d7cf', '#babdb6',
 let s:Background    = '#212628'
 " }}}
 
+hi Normal      guibg=#2e3436 guifg=#d3d7cf
 execute "hi Normal      guibg=" . s:Aluminium[5]  . " guifg=" . s:Aluminium[1] 
 
 " {{{ syntax
@@ -44,7 +45,7 @@ execute "hi Conditional  gui=bold guifg=" . s:Butter[2]
 execute "hi Constant     guifg=" . s:Chocolate[1]
 execute "hi Error        guifg=" . s:Aluminium[0] . " guibg=" . s:ScarletRed[2]
 execute "hi Identifier   guifg=" . s:Orange[2]
-execute "hi Ignore       guifg=" . s:Orange[1]
+execute "hi Ignore       guifg=" . s:Aluminium[5] . " guibg=" . s:Aluminium[5]
 execute "hi Operator     guifg=" . s:Butter[1]
 execute "hi PreProc      guifg=" . s:Chocolate[0]
 execute "hi Repeat       gui=bold guifg=" . s:Butter[2]
