@@ -13,9 +13,10 @@
 
 push @distros, ["ArchLinux", "/etc/issue", "Arch Linux \\((.*?)\\)"];
 $archlinux = "
-$colors[1]
-$colors[1]
-$colors[1]
+$colors[1]   
+$colors[1]   
+$colors[1]   
+$colors[1]   
 $colors[1]                       __       $colors[0]___                                 
 $colors[1]                      /\\ \\    $colors[0] /\\_ \\    __                          
 $colors[1]     __     _ __   ___\\ \\ \\___ $colors[0]\\//\\ \\  /\\_\\    ___   __  __  __  _  
@@ -33,6 +34,4 @@ $colors[0]      $colors[2]%s
 $colors[0]      $colors[2]%s
 $colors[0]      $colors[2]%s
 $colors[0]      $colors[2]%s
-$colors[1]
 $colors[1]"
-

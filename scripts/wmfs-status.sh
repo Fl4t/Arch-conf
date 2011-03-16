@@ -25,7 +25,4 @@ wht="\\#C0C0C0\\"
     dte=$(date "+%I:%M")
 
 # Pipe to status bar
-#wmfs -s "$gry[CHG $bat$gry] [CPU $yel$cpu%$gry] [MEM $cyn$mem$gry] [HDD $mag$hdd$gry] [PAC $blu$pac$gry] [NET $int$gry] • $wht$dte"
-wmfs -s "$gry[CHG $bat$gry] [CPU $yel$cpu%$gry] [MEM $cyn$mem$gry] [HDD $mag$hdd$gry] [PAC $blu$pac$gry] • $wht$dte"
-
-   
+wmfs -s "$gry CHG $bat$gry $red>>$gry CPU $yel$cpu%$gry $red>>$gry MEM $cyn$mem$gry $red>>$gry HDD $mag$hdd$gry $red>>$gry PAC $blu$pac$gry • $wht$dte"

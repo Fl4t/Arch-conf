@@ -63,27 +63,26 @@
 
         tag_round      = true
         occupied_bg    = "#121212"
-        occupied_fg    = "#C0C0C0"
-        sel_fg         = "#000000"
-        sel_bg         = "#888888"
-        urgent_bg      = "#BF4D80"
-        urgent_fg      = "#000000"
+        occupied_fg    = "#477AB3"
+        urgent_bg      = "#477AB3"
+        urgent_fg      = "#121212"
+        sel_fg         = "#121212"
+        sel_bg         = "#BF4D80"
 
         name_count     = false  # If true, number of the tag will be used for name
         border      = false     # Border around the tag buttons.
         autohide    = false     # Hide empty tags in tag list
 
-        [tag] name = "primo"   screen = 0 layout = "max" [/tag]
-        [tag] name = "deuxio"  screen = 0 layout = "tile_right" [/tag]
-        [tag] name = "tertio"  screen = 0 layout = "max" [/tag]
-        [tag] name = "quatro"  screen = 0 layout = "free" [/tag]
+        [tag] name = "web"   screen = 0 layout = "max" [/tag]
+        [tag] name = "term"  screen = 0 layout = "tile_right" [/tag]
+        [tag] name = "scrn"  screen = 0 layout = "max" [/tag]
+        [tag] name = "misc"  screen = 0 layout = "free" [/tag]
 
 [/tags]
 
 [rules]
-       [rule] instance = "firefox"      class = "firefox"      screen = 0     tag = "1"  max =  "true"  [/rule]
-       [rule] instance = "urxvtc"       class = "urxvtc"       screen = 0     tag = "2"  max =  "false" [/rule]
-       [rule] instance = "mutt"         class = "mutt"         screen = 0     tag = "3"  max =  "true"  [/rule]
+       [rule] instance = "firefox"      class = "firefox"      screen = 0     tag = "1"  max =  "false"  [/rule]
+       [rule] instance = "urxvtc"       class = "urxvtc"       screen = 0     tag = "2"  max =  "true" [/rule]
        [rule] instance = "gimp"         class = "gimp"         screen = 0     tag = "4"  free = "true"  [/rule]
 [/rules]
 
@@ -100,10 +99,10 @@
         client_round         = true
         border_height        = 1
         border_shadow        = false
-        border_normal        = "#222222"
-        border_focus         = "#666666"
-        resize_corner_normal = "#222222"
-        resize_corner_focus  = "#666666"
+        border_normal        = "#447AB3"
+        border_focus         = "#BF4D80"
+        resize_corner_normal = "#447AB3"
+        resize_corner_focus  = "#BF4D80"
 
         # Space between tiled clients
         padding = 0
@@ -124,7 +123,7 @@
                 # Available "center", "left", "right" menu align. Default: "center".
                 align = "left"
 
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
  	        	[item] name = "Thunar" func = "spawn" cmd = "thunar" [/item]
@@ -139,7 +138,7 @@
         [set_menu]
                 name = "appmenu"
                 align = "left"
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
                 [item] name = "Firefox" func = "spawn" cmd = "firefox" [/item]
@@ -150,7 +149,7 @@
         [set_menu]
                 name = "toolmenu"
                 align = "left"
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
                 [item] name = "Calc" func = "spawn" cmd = "xcalc" [/item]
@@ -160,17 +159,17 @@
         [set_menu]
                 name = "stylemenu"
                 align = "left"
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
                 [item] name = "Lxapp" func = "spawn" cmd = "lxappearance" [/item]
-                [item] name = "Nitrogen" func = "spawn" cmd = "nitrogen ~/documents/wallpaper/" [/item]
+                [item] name = "Nitrogen" func = "spawn" cmd = "nitrogen ~/docs/img/" [/item]
         [/set_menu]
 
         [set_menu]
                 name = "wmfsmenu"
                 align = "left"
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
                 [item] name = "Next tag" func = "tag_next" [/item]
@@ -184,7 +183,7 @@
         [set_menu]
                 name = "exitmenu"
                 align = "left"
-                fg_focus  = "#121212" bg_focus  = "#666666"
+                fg_focus  = "#121212" bg_focus  = "#BF4D80"
                 fg_normal = "#666666" bg_normal = "#121212"
 
                 [item] name = "Reboot" func = "spawn" cmd = "reboot" [/item]
@@ -265,7 +264,7 @@
         #[key] mod = {"Alt", "Shift"} key = "d" func = "set_nmaster" cmd = "-1" [/key]
 
         #Launcher.
-        [key] mod = {"Super","Shift"} key = "j" func = "launcher" cmd = "launcher_exec" [/key]
+        [key] mod = {"Super","Control"} key = "j" func = "launcher" cmd = "launcher_exec" [/key]
         #ViWMFS
         #[key] mod = {"Super"} key = ":" func = "launcher" cmd = "viwmfs" [/key]
 

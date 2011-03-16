@@ -30,5 +30,3 @@ $colors[0] ?KGHE $colors[1]\_-#DASDFLSV='$colors[0]    'EF
 $colors[0] 'EHTI                   !H
 $colors[0]  \`0F'                   '!
 $nocolor";
-
-

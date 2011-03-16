@@ -1,7 +1,6 @@
 ! ----------------------------------------------------------------------------
 ! file:     ~/.Xdefaults
 ! author:   Fl4t
-! modified: June 2010
 ! ----------------------------------------------------------------------------
 
 ! Xft font settings -----------------------------------------------------------
@@ -21,10 +20,6 @@ Xcursor*size:  16
 ! URxvt settings --------------------------------------------------------------
 
 ! fonts
-!URxvt*font: xft:lime.se:style=Regular:pixelsize=13
-!URxvt*boldFont: xft:lime.se:style=Bold:pixelsize=13
-!URxvt*italicFont: xft:lime.se:style=Italic:pixelsize=13
-!URxvt*boldItalicFont: xft:lime.se:boldItalic:pixelsize=13
 URxvt*font: xft:Envy Code R:medium:pixelsize=13
 URxvt*boldFont: xft:Envy Code R:medium:pixelsize=13
 URxvt*italicFont: xft:Envy Code R:style=Italic:pixelsize=13
@@ -51,7 +46,9 @@ URxvt*urgentOnBell: true
 
 ! perl
 URxvt*perl-lib: /usr/lib/urxvt/perl/
-URxvt*perl-ext-common: default,matcher
+URxvt.perl-ext-common: clipboard
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
 
 ! url launchable
 URxvt*urlLauncher: /usr/bin/firefox
@@ -65,14 +62,12 @@ URxvt*mapAlert: true
 URxvt*skipBuiltinGlyphs: true
 URxvt*imLocale: fr_FR.UTF-8
  
-
 ! terminal colors ------------------------------------------------------------
 
-*background: #393939
+*background: #121212
 *foreground: #babdb6
 
 !#include "/home/fl4t/.colorsheme/flashy"
-
 !#include "/home/fl4t/.colorsheme/necromancer"
 !#include "/home/fl4t/.colorsheme/tangoesque"
 !#include "/home/fl4t/.colorsheme/thayer"

@@ -207,8 +207,9 @@ termcapinfo xterm*|linux*|rxvt*|Eterm* ti@:te@
 #   respectively.
 #
 screen -t weechat weechat-curses
-screen -t top htop
+screen -t htop htop
 screen -t bash
+screen -t TTYter
 
 sorendition =s WB 
 msgwait 3

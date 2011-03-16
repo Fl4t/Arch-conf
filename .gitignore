@@ -56,3 +56,4 @@ documents/
 .vboxclient-seamless.pid
 docs/
 .config/squeeze/
+.xsel.log
