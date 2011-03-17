@@ -57,3 +57,6 @@ documents/
 docs/
 .config/squeeze/
 .xsel.log
+.vim/
+.vimrc
+.gvimrc

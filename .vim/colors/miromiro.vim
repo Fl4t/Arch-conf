@@ -48,17 +48,17 @@ hi Tag             ctermfg=11
 hi Delimiter       ctermfg=12  
 hi SpecialComment  ctermfg=9
 hi Boolean         ctermfg=3
-hi Todo            ctermfg=9    ctermbg=None
-hi MoreMsg         ctermfg=13   ctermbg=None
-hi ModeMsg         ctermfg=13   ctermbg=None
-hi Debug           ctermfg=1    ctermbg=None
-hi MatchParen      ctermfg=0    ctermbg=7
-hi ErrorMsg        ctermfg=1    ctermbg=None
+hi Todo            ctermfg=9
+hi MoreMsg         ctermfg=13
+hi ModeMsg         ctermfg=13
+hi Debug           ctermfg=1
+hi MatchParen      ctermfg=8    ctermbg=7
+hi ErrorMsg        ctermfg=1    ctermbg=11
 hi WildMenu        ctermfg=5    ctermbg=15
 hi Folded          cterm=reverse ctermfg=6    ctermbg=0
 hi Search          ctermfg=1    ctermbg=15
 hi IncSearch       ctermfg=1    ctermbg=15
-hi WarningMsg      ctermfg=1    ctermbg=15
+hi WarningMsg      ctermfg=9    ctermbg=15
 hi Question        ctermfg=10   ctermbg=15
 hi Pmenu           ctermfg=2    ctermbg=15
 hi PmenuSel        ctermfg=1    ctermbg=15
