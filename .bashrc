@@ -11,19 +11,19 @@ fi
 
 #Complétion plus intelligente
 if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+   . /etc/bash_completion
 fi
 
 # lecture colorée de logs
 logview()
 {
-    ccze -A < $1 | less -R
+   ccze -A < $1 | less -R
 }
 
 # lecture colorée de logs en directfunction logview()
 logtail()
 {
-        tail -f $1 | ccze
+   tail -f $1 | ccze
 }
 
 # editeur par default
